@@ -83,7 +83,7 @@ export default function Header() {
                     >
                         <ul className="space-y-2">
                             <motion.li
-                                className="text-black dark:text-gray-200 hover:text-yellow-500 text-lg md:text-xl font-semibold dark:hover:text-yellow-400 transition-colors"
+                                className="text-black hover:bg-java dark:hover:bg-new-yellow dark:text-gray-200 hover:text-yellow-500 text-lg md:text-xl font-semibold dark:hover:text-yellow-400 transition-colors"
                                 whileHover={{ scale: 1.05 }}
                             >
                                 <Link href="">Home</Link>

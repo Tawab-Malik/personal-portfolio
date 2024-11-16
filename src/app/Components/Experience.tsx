@@ -1,8 +1,9 @@
+"use client"
 import {IoCalendarNumberSharp,} from "react-icons/io5";
 import Image from "next/image";
 import { PiPaperPlaneRightFill } from "react-icons/pi";
 import { FaLocationDot } from "react-icons/fa6";
-
+import {motion} from "framer-motion"
 
 
 
@@ -11,10 +12,14 @@ import { FaLocationDot } from "react-icons/fa6";
               <>
                   <section  className=" dark:bg-black bg-white relative z-10 -mt-24 py-24">
                       <div className=" max-w-7xl mx-5 xl:mx-auto">
-                          <div className=" flex flex-col justify-center items-center relative">
+                          <motion.div
+                          initial={{ y: 50 }}
+                          whileInView={{ y: 0, transition: { duration: 0.6, type: "spring" ,stiffness: 50,damping: 15, } }}
+                          viewport={{ once: true }}
+                          className=" flex flex-col justify-center items-center relative">
                               <h2 className=" text-[55px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">Experience</h2>
                               <h2 className="absolute top-5  text-5xl text-center font-bold text-java dark:text-new-yellow">Experience</h2>
-                          </div>
+                          </motion.div>
 
 
                       {/*    main card*/}

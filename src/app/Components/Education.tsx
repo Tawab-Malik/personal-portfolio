@@ -1,9 +1,10 @@
+"use client"
 import MovingGradient from "@/components/ui/BGanimation";
-import MovingBlobCard from "@/app/Components/BlobContainer";
-import BlurryBlob from "@/components/ui/BlurBob";
+// import MovingBlobCard from "@/app/Components/BlobContainer";
+// import BlurryBlob from "@/components/ui/BlurBob";
 import { IoCalendarNumberSharp } from "react-icons/io5";
 import Image from "next/image";
-
+import {motion} from "framer-motion"
 
 
 
@@ -15,10 +16,14 @@ import Image from "next/image";
                                 <section className=" dark:bg-black bg-white relative z-10 -mt-24 py-24">
                                     <div className=" max-w-7xl mx-5 xl:mx-auto">
 
-                                        <div className=" flex flex-col justify-center items-center relative">
+                                        <motion.div
+                                        initial={{ y: 50 }}
+                                        whileInView={{ y: 0, transition: { duration: 0.6, type: "spring" ,stiffness: 50,damping: 15, } }}
+                                        viewport={{ once: true }}
+                                        className=" flex flex-col justify-center items-center relative">
                                             <h2 className=" text-[55px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">Education</h2>
                                             <h2 className="absolute top-5  text-5xl text-center font-bold text-java dark:text-new-yellow">Education</h2>
-                                        </div>
+                                        </motion.div>
 
                                         {/*main div*/}
                                         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-5 mt-20 pb-5">

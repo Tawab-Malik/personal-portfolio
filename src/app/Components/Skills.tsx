@@ -1,7 +1,8 @@
+"use client"
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { GoDownload } from "react-icons/go";
-
+import { motion } from "framer-motion"
 
 export default function Skills() {
     const skills = [
@@ -32,19 +33,26 @@ export default function Skills() {
         <>
             <section className=" dark:bg-black bg-white relative z-10 -mt-24 py-24">
                 <div className=" max-w-7xl mx-5 xl:mx-auto">
-                    <div
+                    <motion.div
+                        initial={{ y: 50 }}
+                        whileInView={{ y: 0, transition: { duration: 0.6, type: "spring", stiffness: 50, damping: 15, } }}
+                        viewport={{ once: true }}
+
                         className=" flex flex-col justify-center items-center relative">
                         <h2 className=" text-[55px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">Skills</h2>
                         <h2 className="absolute top-5  text-5xl text-center font-bold text-java dark:text-new-yellow">Skills</h2>
-                    </div>
+                    </motion.div>
                     {/*          tools*/}
-                    <div
+                    <motion.div
+                        initial={{ y: 50 }}
+                        whileInView={{ y: 0, transition: { duration: 0.6, type: "spring", stiffness: 50, damping: 15, delay: 0.1 } }}
+                        viewport={{ once: true }}
                         className=" flex flex-col justify-center items-center relative mt-14">
                         <h2 className=" text-[50px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">Design
                             Tools I Use</h2>
                         <h2 className="absolute top-6  text-4xl text-center font-bold text-java dark:text-new-yellow">Design
                             Tools I Use</h2>
-                    </div>
+                    </motion.div>
 
                     {/*  list*/}
                     <div
@@ -67,13 +75,17 @@ export default function Skills() {
 
                     </div>
                     {/*          technologies i use */}
-                    <div
+                    <motion.div
+                        initial={{ y: 50 }}
+                        whileInView={{ y: 0, transition: { duration: 0.6, type: "spring", stiffness: 50, damping: 15, delay: 0.2 } }}
+                        viewport={{ once: true }}
+
                         className=" flex flex-col justify-center items-center relative mt-10">
                         <h2 className=" text-[50px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">Technologies
                             I Use</h2>
                         <h2 className="absolute top-6  text-4xl text-center font-bold text-java dark:text-new-yellow">Technologies
                             I Use</h2>
-                    </div>
+                    </motion.div>
                     {/*    tech i use */}
                     <div
                         className="flex flex-wrap gap-5 justify-center items-center my-10">
@@ -91,13 +103,16 @@ export default function Skills() {
 
 
                     {/*    Development Tools i use */}
-                    <div
+                    <motion.div
+                        initial={{ y: 50 }}
+                        whileInView={{ y: 0, transition: { duration: 0.6, type: "spring", stiffness: 50, damping: 15, } }}
+                        viewport={{ once: true }}
                         className=" flex flex-col justify-center items-center relative mt-16">
-                        <h2 className=" text-[40px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">DEVELOPEMENT
+                        <h2 className=" text-[40px] leading-[50px] md:leading-normal drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">DEVELOPEMENT
                             & PRODUCTIVITY <br></br> TOOLS I USE</h2>
                         <h2 className="absolute top-6  text-4xl text-center font-bold text-java dark:text-new-yellow">DEVELOPEMENT
                             & PRODUCTIVITY <br></br> TOOLS I USE</h2>
-                    </div>
+                    </motion.div>
                     {/*    tech i use */}
                     <div
                         className="flex flex-wrap gap-5 justify-center items-center my-10">
@@ -116,8 +131,8 @@ export default function Skills() {
                     {/*    button*/}
                     <div className=" flex justify-center mt-16">
                         <Button href="#"
-                            className=" bg-[#995FB6] text-black flex justify-center rounded-full text-lg  dark:bg-new-yellow  !py-3 h-auto !px-6  items-center gap-x-2 font-semibold"><GoDownload
-                                className="dark:bg-new-yellow text-black h-5 w-5" /> Resume</Button>
+                            className=" bg-[#995FB6] border-2  border-[#995FB6] dark:border-new-yellow  text-black flex justify-center rounded-full text-lg dark:hover:bg-new-yellow-700 dark:bg-new-yellow  !py-3 h-auto !px-6  items-center gap-x-2 font-semibold"><GoDownload
+                                className=" text-black h-5 w-5" /> Resume</Button>
                     </div>
                 </div>
             </section>
