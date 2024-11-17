@@ -26,7 +26,7 @@ export default function Header() {
                 </div>
             </div>
             {/*right div*/}
-            <div className=" flex items-center gap-x-2 md:gap-x-4">
+            <div className=" flex items-center gap-x-1 md:gap-x-4">
                 {/* Dark Mode Toggle Button */}
                 <button
                     onClick={() => setIsDarkMode(!isDarkMode)}
@@ -62,7 +62,7 @@ export default function Header() {
                     <p className=" pl-2 text-lg dark:text-white text-black font-semibold">Menu</p>
                     <button
                         onClick={() => setMenuOpen(!menuOpen)}
-                        className="p-2 ml-2 rounded-full bg-java dark:bg-new-yellow  text-black dark:text-white transition-transform duration-300"
+                        className="p-2 ml-1 md:ml-2 rounded-full bg-java dark:bg-new-yellow  text-black dark:text-white transition-transform duration-300"
                     >
                         <BiMenuAltRight className={`w-7 h-7 ${menuOpen ? 'rotate-180' : 'rotate-0'}`}/>
                     </button>

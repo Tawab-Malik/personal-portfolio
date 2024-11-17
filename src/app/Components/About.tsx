@@ -49,7 +49,7 @@ import { motion } from 'framer-motion';
                             {/*1st */}
                             <div
                                 className=" dark:bg-white bg-[#995FB6] py-3 px-5 flex gap-x-4 items-center rounded-full hover:-translate-y-2 duration-500">
-                                <Image src="/images/about/Headphones.png" alt="imges" height={50} width={50}/>
+                                <Image src="/images/about/headphones.png" alt="imges" height={50} width={50}/>
                                 <p className=" text-xl text-black dark:text-[#4DC7EB] font-semibold">Listening to
                                     Music</p>
                             </div>
