@@ -21,7 +21,7 @@ export default function Checkout() {
                     </motion.div>
 
                     {/* main div */}
-                    <div className="mt-16 pb-14 pt-10 bg-[#d1d1d1] dark:bg-[#181818] rounded-3xl">
+                    <div className="mt-16 pb-14 pt-10 bg-[#f3f3f3] dark:bg-[#181818] rounded-3xl">
                         <div className="flex justify-center">
                             <Image src="/images/about/logo.jpeg"
                                 className=" rounded-full dark:border-new-yellow border-[#995FB6] border-2" alt="Logo"

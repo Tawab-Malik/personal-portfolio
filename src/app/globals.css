@@ -3,9 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 /* globals.css */
-
+ html{
+     scroll-behavior: smooth;
+ }
 body {
         font-family: "Montserrat", sans-serif;
          font-weight: normal;
          font-style: normal;
+}
+input:-webkit-autofill {
+    color: black !important; /* Set the color of autofilled text */
+    background-color: transparent !important; /* Optional: if you want to keep the background transparent */
 }

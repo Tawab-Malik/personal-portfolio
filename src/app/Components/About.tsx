@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 
 
     return (
-        <section className=" dark:bg-black bg-white relative z-10 -mt-24 py-24">
+        <section className=" dark:bg-black bg-white relative z-10 -mt-24 py-24" id="about">
             <div className=" max-w-7xl mx-5 xl:mx-auto">
                 <motion.div
                     initial={{ y: 50 }}

@@ -46,7 +46,7 @@ import {motion} from "framer-motion"
 
                                                     </div>
 
-                                                    <div className=" flex md:flex-row flex-col gap-3 items-start md:items-center py-3 md:my-5">
+                                                    <div className=" flex md:flex-row flex-col gap-3 items-start md:items-center my-3 md:my-5">
                                                         <p className=" text-black text-xl font-bold bg-[#fff0f5] dark:bg-white py-2 px-4 rounded-full">Inter
                                                             Degree</p>
                                                         <p className=" text-black text-xl font-bold bg-[#fff0f5] dark:bg-white py-2 px-4 rounded-full">Ics</p>
@@ -75,7 +75,7 @@ import {motion} from "framer-motion"
 
                                             </MovingGradient>
                                         {/*    right div*/}
-                                            <div className="rounded-3xl shadow-md  bg-white  text-new-yellow">
+                                            <div className="rounded-3xl shadow-md  bg-[#f3f3f3] dark:bg-white  text-new-yellow">
                                                 <div className=" p-5">
                                                     <div className=" flex md:flex-row flex-col gap-3 justify-start  md:justify-between items-start md:items-center ">
                                                         <div
@@ -85,7 +85,7 @@ import {motion} from "framer-motion"
                                                         </div>
                                                         <div
                                                             className=" flex items-center justify-start gap-x-3 bg-wisteria-200 dark:bg-new-yellow-200 py-2 px-4 rounded-full">
-                                                            <Image src="/images/about/inter.png" alt="img" height={40}
+                                                            <Image src="/images/about/graduation.png" alt="img" height={40}
                                                                    width={40} className=""/>
                                                             <p className="  text-xl text-black font-bold">Graduation</p>
                                                         </div>
@@ -99,7 +99,7 @@ import {motion} from "framer-motion"
                                                         <p className=" text-black text-xl font-bold bg-[#E7E7E7] py-2 px-4 rounded-full">BSCs</p>
                                                     </div>
 
-                                                    <h2 className=" text-3xl text-black font-bold mt-7 md:mt-5">Intermediate in
+                                                    <h2 className=" text-3xl text-black font-bold mt-7 md:mt-5">Bachelor's in
                                                         Computer Science</h2>
 
                                                     <div className=" space-y-3 mt-5">

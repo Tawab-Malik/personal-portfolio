@@ -55,7 +55,7 @@ export default function Connect() {
                                     <Image
                                         src={skill.image}
                                         alt={skill.name}
-                                        className="group-hover:-rotate-12 transition-transform duration-500"
+                                        className="group-hover:-rotate-12 drop-shadow-2xl transition-transform duration-500"
                                         height={80}
                                         width={80}
                                     />

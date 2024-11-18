@@ -10,6 +10,7 @@ import Project from "./Components/Project";
 import Checkout from "./Components/Checkout";
 import Connect from "./Components/Connect";
 import Contact from "./Components/Contact";
+import Footer from "@/app/Components/Footer";
 // import PhotoCompare from "./Components/Swipe";
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
               </div> */}
         <Connect />
         <Contact/>
+        <Footer/>
 
       </NextUIProvider>
 

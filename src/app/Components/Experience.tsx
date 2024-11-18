@@ -29,10 +29,10 @@ import {motion} from "framer-motion"
                                   <div className=" flex md:flex-row flex-col gap-y-2 justify-start  md:justify-between items-start md:items-center ">
                                       <div
                                           className=" flex items-center flex-col justify-start bg-black py-2 px-6 rounded-full">
-                                          <p className=" text-wisteria dark:text-new-yellow text-lg md:text-xl font-bold">Code Cradle Technologies</p>
-                                          <div className="flex gap-x-2 items-center">
+                                          <p className=" text-wisteria dark:text-new-yellow text-lg md:text-xl md:text-start text-center font-bold">Code Cradle Technologies</p>
+                                          <div className="flex gap-x-2 items-center ">
                                               <FaLocationDot className=" h-4 w-4 text-wisteria dark:text-new-yellow" />
-                                              <p className=" text-white text-sm font-bold">Bahwalpur, Pakistan</p>
+                                              <p className=" text-white text-sm font-bold">Bahawalpur, Pakistan</p>
                                           </div>
 
                                       </div>

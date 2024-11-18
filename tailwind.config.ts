@@ -12,6 +12,9 @@ const config = {
   ],
   prefix: "",
   theme: {
+    boxShadow: {
+      'inner-lg': 'inset 0 5px 5px rgba(0, 0, 0, 0.1)', // Example custom shadow
+    },
     colors: {
       filter: {
         "blur-20": "blur(20px)",
