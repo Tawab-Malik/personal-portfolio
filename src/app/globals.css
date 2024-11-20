@@ -11,7 +11,13 @@ body {
          font-weight: normal;
          font-style: normal;
 }
-input:-webkit-autofill {
-    color: black !important; /* Set the color of autofilled text */
-    background-color: transparent !important; /* Optional: if you want to keep the background transparent */
-}
+
+.dark input:-webkit-autofill {
+    /* -webkit-box-shadow: 0 0 0 1000px #1a202c inset !important; */
+    -webkit-text-fill-color: #000000 !important; /* Light text */
+  }
+  
+  .light input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important; /* Light background */
+    -webkit-text-fill-color: #000000 !important; /* Dark text */
+  }

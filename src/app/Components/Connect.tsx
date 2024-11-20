@@ -30,7 +30,7 @@ export default function Connect() {
                         viewport={{ once: true }}
                         className="flex flex-col justify-center items-center relative"
                     >
-                        <h2 className="text-[55px] leading-[64px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">
+                        <h2 className=" text-[45px] md:text-[55px] leading-[64px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">
                             Connect With Me
                         </h2>
                         <h2 className="absolute top-5 text-5xl text-center font-bold text-java dark:text-new-yellow">
@@ -55,7 +55,7 @@ export default function Connect() {
                                     <Image
                                         src={skill.image}
                                         alt={skill.name}
-                                        className="group-hover:-rotate-12 drop-shadow-2xl transition-transform duration-500"
+                                        className="group-hover:-rotate-12 drop-shadow-2xl transition-transform duration-500 h-[50px] sm:h-[80px[] w-[50px] sm:w-[80px]"
                                         height={80}
                                         width={80}
                                     />

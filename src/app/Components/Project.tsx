@@ -77,7 +77,7 @@ export default function Project() {
                 whileInView={{ y: 0, transition: { duration: 0.6, type: "spring" ,stiffness: 50,damping: 15, } }}
                 viewport={{ once: true }}
                 className="flex flex-col justify-center items-center relative">
-                    <h2 className="text-[55px] leading-[40px] md:leading-[64px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">
+                    <h2 className=" text-[45px] md:text-[55px] leading-[40px] md:leading-[64px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">
                         Projects I've <br /> Worked On
                     </h2>
                     <h2 className="absolute top-5 text-5xl text-center font-bold text-java dark:text-new-yellow">

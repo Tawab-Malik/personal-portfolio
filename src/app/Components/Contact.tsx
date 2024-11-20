@@ -88,7 +88,7 @@ export default function Contact() {
                                         inputWrapper:
                                             'bg-transparent !shadow-none h-auto group[data-focus="true"] group-data-[focus=true]:bg-transparent data-[hover=true]:bg-transparent',
                                         input:
-                                            'group[data-has-value="true"] group-data-[has-value=true]:!text-[#27272a] text-sm',
+                                            'group[data-has-value="true"] group-data-[has-value=true]:!text-[#27272a] text-base',
                                         innerWrapper: 'gap-x-2 !py-3 h-auto',
                                     }}
                                     startContent={
@@ -108,7 +108,7 @@ export default function Contact() {
                                         inputWrapper:
                                             'bg-transparent !shadow-none h-auto group[data-focus="true"] group-data-[focus=true]:bg-transparent, data-[hover=true]:bg-transparent',
                                         input:
-                                            'group[data-has-value="true"] group-data-[has-value=true]:!text-[#27272a] text-sm',
+                                            'group[data-has-value="true"] group-data-[has-value=true]:!text-[#27272a] text-base',
                                         innerWrapper: ' !py-3 gap-x-2',
                                     }}
                                     startContent={
@@ -130,7 +130,7 @@ export default function Contact() {
                                         inputWrapper:
                                             'bg-transparent !shadow-none h-auto group[data-focus="true"] group-data-[focus=true]:bg-transparent, data-[hover=true]:bg-transparent',
                                         input:
-                                            'group[data-has-value="true"] group-data-[has-value=true]:!text-[#27272a] text-sm',
+                                            'group[data-has-value="true"] group-data-[has-value=true]:!text-[#27272a] text-base',
                                         innerWrapper: 'gap-x-2 !py-3',
                                     }}
                                     startContent={
@@ -150,7 +150,7 @@ export default function Contact() {
                                         inputWrapper:
                                             'bg-transparent h-auto !shadow-none group[data-focus="true"] group-data-[focus=true]:bg-transparent, data-[hover=true]:bg-transparent',
                                         input:
-                                            'text-sm group[data-has-value="true"] group-data-[has-value=true]:text-[#27272a]',
+                                            'text-sm group[data-has-value="true"] group-data-[has-value=true]:text-[#27272a] text-base',
                                         innerWrapper: 'gap-x-2 !py-3',
                                     }}
                                 />
@@ -169,7 +169,7 @@ export default function Contact() {
                                     inputWrapper:
                                         'bg-transparent h-auto !shadow-none group[data-focus="true"] group-data-[focus=true]:bg-transparent data-[hover=true]:bg-transparent',
                                     input:
-                                        'h-auto py-2 text-sm group[data-has-value="true"] group-data-[has-value=true]:text-[#27272a]',
+                                        'h-auto py-2 text-sm group[data-has-value="true"] group-data-[has-value=true]:text-[#27272a] text-base',
                                 }}
                             />
 

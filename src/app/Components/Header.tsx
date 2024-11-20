@@ -21,7 +21,7 @@ export default function Header() {
         <header className="flex  relative items-center justify-between p-1 mt-5 !bg-[#995fb6] dark:!bg-[#e7e7e7] transition-colors rounded-full duration-300 max-w-7xl mx-5 xl:mx-auto">
             <div className="flex items-center">
                 <div className="flex items-center space-x-2 ">
-                    <Link href="/"> <span className=" ml-2 font-normal text-lg md:text-xl text-white dark:text-black">ABDUL<span
+                    <Link href="/"> <span className=" ml-2 font-normal text-sm sm:text-lg md:text-xl text-white dark:text-black">ABDUL<span
                         className=" font-bold">TAWAB</span></span></Link>
                 </div>
             </div>
