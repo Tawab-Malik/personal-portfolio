@@ -5,25 +5,25 @@ import { HiLink } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { Button } from "@nextui-org/react";
 // import { GoDownload } from "react-icons/go";
-import { IoEyeSharp } from "react-icons/io5";
+// import { IoEyeSharp } from "react-icons/io5";
 
-export default function Project() {
+export default function AllProjects() {
     const projects = [
         {
             id: 1,
             name: "Match-Maker Capital",
             description: "Technologies I have used",
             image: "/images/project/match.png",
-            link: "https://example.com",
-            backgroundColor: "bg-wisteria-200 dark:bg-downriver",
-            skillColors: ["bg-wisteria-500 dark:bg-downriver-200"],
+            link: "https://match-maker-dev.vercel.app/",
+            backgroundColor: "bg-wisteria-200 dark:bg-[#D43FDE]",
+            skillColors: ["bg-wisteria-500 dark:bg-[#af38b7]"],
         },
         {
             id: 2,
             name: "Scale Pass",
             description: "Technologies I have used",
             image: "/images/project/scalepass.png",
-            link: "https://example.com",
+            link: "https://scalepass-dev.vercel.app/",
             backgroundColor: "bg-[#70d1b1] dark:bg-[#9ae0c9]",
             skillColors: ["bg-[#57a88d] dark:bg-[#49aa8a]"],
         },
@@ -32,9 +32,63 @@ export default function Project() {
             name: "Dragon Bull Run",
             description: "Technologies I have used",
             image: "/images/project/dragon.png",
-            link: "https://example.com",
+            link: "https://dragonbull.vercel.app/",
             backgroundColor: "bg-new-yellow-600",
             skillColors: ["bg-new-yellow-700"],
+        },
+        {
+            id: 4,
+            name: "Flatcap Ape",
+            description: "Technologies I have used",
+            image: "/images/project/flatcap.png",
+            link: "https://flatcapape.vercel.app/",
+            backgroundColor: "bg-[#FF9000]",
+            skillColors: ["bg-[#c47009]"],
+        },
+        {
+            id: 5,
+            name: "Moon Rat",
+            description: "Technologies I have used",
+            image: "/images/project/moonrat.png",
+            link: "https://moonrat-dev.vercel.app/",
+            backgroundColor: "bg-[#F29C86]",
+            skillColors: ["bg-[#ce8573]"],
+        },
+        {
+            id: 6,
+            name: "Durag Dog",
+            description: "Technologies I have used",
+            image: "/images/project/duragdog.png",
+            link: "https://duragdoge.vercel.app/",
+            backgroundColor: "bg-[#1F4659]",
+            skillColors: ["bg-[#193744]"],
+        },
+        {
+            id: 7,
+            name: "Mythic Wings",
+            description: "Technologies I have used",
+            image: "/images/project/mythic.png",
+            link: "https://mythicwings.vercel.app/",
+            backgroundColor: "bg-[#63443F]",
+            skillColors: ["bg-[#543935]"],
+        },
+        {
+            id: 8,
+            name: "SatoshiDex",
+            description: "Technologies I have used",
+            image: "/images/project/stoshi.png",
+            link: "https://stoshi-dex.vercel.app/",
+            backgroundColor: "bg-[#241116]",
+            skillColors: ["bg-[#351a21]"],
+        },
+        {
+            id: 9,
+            name: "Uni-Bridge",
+            description: "Technologies I have used",
+            image: "/images/project/unibridge.png",
+            link: "https://uni-bridge-nine.vercel.app/",
+            backgroundColor: "bg-[#0D5857]",
+            skillColors: ["bg-[#093534]"],
         },
     ];
 
@@ -70,18 +124,18 @@ export default function Project() {
     };
 
     return (
-        <section className="dark:bg-black bg-white relative z-10 -mt-24 py-24">
+        <section className="dark:bg-black bg-white relative z-10  py-24">
             <div className="max-w-7xl mx-5 xl:mx-auto">
                 <motion.div
                     initial={{ y: 50 }}
-                    whileInView={{ y: 0, transition: { duration: 0.6, type: "spring", stiffness: 50, damping: 15, } }}
+                    whileInView={{ y: 0, transition: { duration: 0.6, type: "spring" ,stiffness: 50,damping: 15, } }}
                     viewport={{ once: true }}
                     className="flex flex-col justify-center items-center relative">
-                    <h2 className=" text-[45px] md:text-[55px] leading-[40px] md:leading-[64px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">
-                        Projects I've <br /> Worked On
+                    <h2 className="text-[55px] leading-[40px] md:leading-[64px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">
+                        All Projects
                     </h2>
                     <h2 className="absolute top-5 text-5xl text-center font-bold text-java dark:text-new-yellow">
-                        Projects I've <br /> Worked On
+                        All Projects
                     </h2>
                 </motion.div>
 
@@ -114,7 +168,7 @@ export default function Project() {
                                             <motion.div
                                                 key={skill.id}
                                                 className={`${project.skillColors[index % project.skillColors.length]
-                                                    } w-full md:w-auto py-3 px-5 flex gap-x-2 items-center rounded-full hover:!-translate-y-2 duration-500`}
+                                                } w-full md:w-auto py-3 px-5 flex gap-x-2 items-center rounded-full hover:!-translate-y-2 duration-500`}
                                                 custom={index} // Pass index to the variant
                                                 variants={itemVariants}
                                             >
@@ -142,11 +196,11 @@ export default function Project() {
 
                 {/*    button*/}
                 <div className=" flex justify-center mt-16">
-                    <Link  href="/allprojects">
-                    <Button
-                        className="  bg-[#995FB6] border-2  border-[#995FB6] dark:border-new-yellow  text-black flex justify-center rounded-full text-lg dark:hover:bg-new-yellow-700 dark:bg-new-yellow  !py-3 h-auto !px-6  items-center gap-x-2 font-semibold"><IoEyeSharp className=" text-black h-5 w-5" /> View All</Button>
+                    <Link href="/#contact">
+                        <Button
+                            className="  bg-[#995FB6] border-2  border-[#995FB6] dark:border-new-yellow  text-black flex justify-center rounded-full text-lg dark:hover:bg-new-yellow-700 dark:bg-new-yellow  !py-3 h-auto !px-6  items-center gap-x-2 font-semibold"> Hire Me</Button>
                     </Link>
-                    
+
                 </div>
             </div>
         </section>

@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import Header from "../app/Components/Header";
+
 import { NextUIProvider } from "@nextui-org/react";
 import Herosection from "@/app/Components/Herosection";
 import About from "@/app/Components/About";
@@ -10,14 +10,13 @@ import Project from "./Components/Project";
 import Checkout from "./Components/Checkout";
 import Connect from "./Components/Connect";
 import Contact from "./Components/Contact";
-import Footer from "@/app/Components/Footer";
 // import PhotoCompare from "./Components/Swipe";
 
 export default function Home() {
   return (
     <>
       <NextUIProvider>
-        <Header />
+      
         <Herosection />
         <About />
         <Education />
@@ -31,7 +30,7 @@ export default function Home() {
               </div> */}
         <Connect />
         <Contact/>
-        <Footer/>
+        
 
       </NextUIProvider>
 

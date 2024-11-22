@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 // import localFont from "next/font/local";
+import Footer from "@/app/Components/Footer";
 import "./globals.css";
-
+import Header from "../app/Components/Header";
 // Import Montserrat from Google Fonts
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -28,7 +29,9 @@ export default function RootLayout({
       <body
           className={` ${montserrat.variable} antialiased`}
       >
+          <Header />
       {children}
+      <Footer/>
       </body>
       </html>
   );
