@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { GoDownload } from "react-icons/go";
 import { motion } from "framer-motion"
-
+import Link from "next/link";
 export default function Skills() {
     const skills = [
         { id: 1, name: "Adobe XD", image: "/images/skills/xd.png" },
@@ -130,9 +130,11 @@ export default function Skills() {
 
                     {/*    button*/}
                     <div className=" flex justify-center mt-16">
-                        <Button href="#"
-                            className=" bg-[#995FB6] border-2  border-[#995FB6] dark:border-new-yellow  text-black flex justify-center rounded-full text-lg dark:hover:bg-new-yellow-700 dark:bg-new-yellow  !py-3 h-auto !px-6  items-center gap-x-2 font-semibold"><GoDownload
+                        <Link href="/images/abdultawab.pdf" target="_blank" >
+                        <Button className=" bg-[#995FB6] border-2  border-[#995FB6] dark:border-new-yellow  text-black flex justify-center rounded-full text-lg dark:hover:bg-new-yellow-700 dark:bg-new-yellow  !py-3 h-auto !px-6  items-center gap-x-2 font-semibold"><GoDownload
                                 className=" text-black h-5 w-5" /> Resume</Button>
+                        </Link>
+                        
                     </div>
                 </div>
             </section>

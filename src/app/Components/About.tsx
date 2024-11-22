@@ -3,7 +3,7 @@ import Image from "next/image";
 import {GoDownload} from "react-icons/go";
 import {Button} from "@nextui-org/button";
 import { motion } from 'framer-motion';
-
+import Link from "next/link";
 
 
 
@@ -100,7 +100,9 @@ import { motion } from 'framer-motion';
                 </p>
 
                 <div className=" flex justify-center mt-16">
-                    <Button href="#" className=" text-[#995FB6] dark:text-new-yellow flex justify-center rounded-full text-lg bg-black dark:bg-[#241d0b] border-2 !py-3 h-auto !px-6 dark:border-new-yellow border-[#995FB6] items-center gap-x-2 font-semibold"><GoDownload className="dark:text-new-yellow text-[#995FB6] h-5 w-5" /> Contact Me</Button>
+                    <Link href="#contact">
+                    <Button  className=" text-[#995FB6] dark:text-new-yellow flex justify-center rounded-full text-lg bg-black dark:bg-[#241d0b] border-2 !py-3 h-auto !px-6 dark:border-new-yellow border-[#995FB6] items-center gap-x-2 font-semibold"><GoDownload className="dark:text-new-yellow text-[#995FB6] h-5 w-5" /> Contact Me</Button> 
+                    </Link>
                 </div>
 
 

@@ -90,6 +90,24 @@ export default function AllProjects() {
             backgroundColor: "bg-[#0D5857]",
             skillColors: ["bg-[#093534]"],
         },
+        {
+            id: 10,
+            name: "StratoNode",
+            description: "Technologies I have used",
+            image: "/images/project/stratonode.png",
+            link: "https://stratonode-two.vercel.app/",
+            backgroundColor: "bg-[#c9ab34]",
+            skillColors: ["bg-[#826e1f]"],
+        },
+        {
+            id: 11,
+            name: "AI ChatBot",
+            description: "Technologies I have used",
+            image: "/images/project/chatbot.png",
+            link: "https://ai-assistant-chi-seven.vercel.app/",
+            backgroundColor: "bg-[#a2bc2f]",
+            skillColors: ["bg-[#74871f]"],
+        },
     ];
 
     const skills = [
@@ -107,7 +125,7 @@ export default function AllProjects() {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            transition: { staggerChildren: 0.2 },
+            transition: { staggerChildren: 0.1 },
         },
     };
 
@@ -145,7 +163,7 @@ export default function AllProjects() {
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.1 }} >
+                    viewport={{ once: true,}} >
                     {projects.map((project) => (
                         <motion.div
                             key={project.id}

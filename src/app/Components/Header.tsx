@@ -92,13 +92,13 @@ export default function Header() {
                                 className="text-black hover:bg-java px-4 py-2 dark:hover:bg-new-yellow dark:text-gray-200 hover:text-yellow-500 text-lg md:text-xl font-semibold dark:hover:text-yellow-400 transition-colors"
                                 whileHover={{ scale: 1.0 }}
                             >
-                               <Link href="#about">About</Link>
+                               <Link href="/#about">About</Link>
                             </motion.li>
                             <motion.li
                                 className="text-black hover:bg-java px-4 py-2 dark:hover:bg-new-yellow dark:text-gray-200 hover:text-yellow-500 text-lg md:text-xl font-semibold dark:hover:text-yellow-400 transition-colors"
                                 whileHover={{ scale: 1.0 }}
                             >
-                               <Link href="#contact">Contact</Link>
+                               <Link href="/#contact">Contact</Link>
                             </motion.li>
                         </ul>
                     </motion.nav>
