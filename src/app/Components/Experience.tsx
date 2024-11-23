@@ -39,7 +39,7 @@ import {motion} from "framer-motion"
                                       <div
                                           className=" flex items-center justify-start gap-x-3 bg-wisteria-200 dark:bg-new-yellow-200 py-2 px-4 rounded-full">
                                           <IoCalendarNumberSharp  className=" text-black h-6 w-6"/>
-                                          <p className="  text-xl text-black font-bold">MAY 2024-PRESENT</p>
+                                          <p className="  text-xl text-black font-bold">MAY 2023-PRESENT</p>
                                       </div>
 
                                   </div>
