@@ -164,12 +164,13 @@ export default function Contact() {
                                 onChange={handleChange}
                                 placeholder="Message *"
                                 rows={7}
-                                className="outline-none border-1 border-[#d4d4d4] shadow-inner-lg rounded-2xl text-base"
+                                className="outline-none border-1 border-[#d4d4d4] shadow-inner-lg rounded-2xl text-base !h-auto"
+                                style={{ height: 'auto ' }}
                                 classNames={{
                                     inputWrapper:
                                         'bg-transparent h-auto !shadow-none group[data-focus="true"] group-data-[focus=true]:bg-transparent data-[hover=true]:bg-transparent',
                                     input:
-                                        'h-auto py-2 text-sm group[data-has-value="true"] group-data-[has-value=true]:text-[#27272a] text-base',
+                                        '!h-auto py-2 text-sm group[data-has-value="true"] group-data-[has-value=true]:text-[#27272a] text-base',
                                 }}
                             />
 

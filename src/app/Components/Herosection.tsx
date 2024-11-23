@@ -32,7 +32,7 @@ export default function Herosection(){
                               <TypewriterEffectSmooth words={words} />
                           </div>
                           <p className=" text-2xl text-black dark:text-white text-center mt-4 relative z-10">A <span className=" font-semibold">Front End Developer | Web Designer</span> </p>
-                          <p className=" text-lg  text-black dark:text-white text-center mt-2 relative z-10">with <span className=" mx-2 border-2 border-[#2f2f2f] dark:border-[#2f2f2f] bg-[#241d0b] px-3 py-1 rounded-2xl dark:bg-[#241d0b] text-[#995FB6] dark:text-new-yellow ">2+ Years</span> Experience</p>
+                          <p className=" text-lg  text-black dark:text-white text-center mt-2 relative z-10">with <span className=" mx-2 border-2 border-[#2f2f2f] dark:border-[#2f2f2f] bg-[#241d0b] px-3 py-1 rounded-2xl dark:bg-[#241d0b] text-[#995FB6] dark:text-new-yellow ">1.9+ Years</span> Experience</p>
                           <div className=" flex justify-center items-center gap-x-5 mt-8 relative z-10">
                             <Link href="/images/abdultawab.pdf" target="_blank">
                             <Button  className=" text-[#995FB6] dark:text-new-yellow flex justify-center rounded-full text-lg bg-black dark:bg-[#241d0b] border-2 !py-2 h-auto !px-6 dark:border-new-yellow border-[#995FB6] items-center gap-x-2 font-semibold"><GoDownload className="dark:text-new-yellow text-[#995FB6] h-5 w-5" /> Resume</Button>
