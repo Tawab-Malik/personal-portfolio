@@ -16,7 +16,7 @@ export default function Checkout() {
                         <h2 className=" text-[45px] md:text-[55px] leading-[40px] md:leading-[64px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">
                             Checkout my <br /> Resume
                         </h2>
-                        <h2 className="absolute top-5 text-5xl text-center font-bold text-java dark:text-new-yellow">
+                        <h2 className="absolute top-5 text-4xl md:text-5xl text-center font-bold text-java dark:text-new-yellow">
                             Checkout my <br /> Resume
                         </h2>
                     </motion.div>

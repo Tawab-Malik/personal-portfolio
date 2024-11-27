@@ -11,21 +11,21 @@ export default function Project() {
     const projects = [
         {
             id: 1,
-            name: "Match-Maker Capital",
+            name: "RollBlock",
             description: "Technologies I have used",
-            image: "/images/project/match.png",
-            link: "https://match-maker-dev.vercel.app/",
-            backgroundColor: "bg-wisteria-200 dark:bg-downriver",
-            skillColors: ["bg-wisteria-500 dark:bg-downriver-200"],
+            image: "/images/project/rollblock.png",
+            link: "https://presale-rollblock.com/",
+            backgroundColor: "bg-[#FAC725]",
+            skillColors: ["bg-[#bf961c]"],
         },
         {
             id: 2,
-            name: "Scale Pass",
+            name: "RebelSatoshi",
             description: "Technologies I have used",
-            image: "/images/project/scalepass.png",
-            link: "https://scalepass-dev.vercel.app/",
-            backgroundColor: "bg-[#70d1b1] dark:bg-[#9ae0c9]",
-            skillColors: ["bg-[#57a88d] dark:bg-[#49aa8a]"],
+            image: "/images/project/satoshi.png",
+            link: "https://rebelsatoshi.com/",
+            backgroundColor: "bg-[#5B5F71]",
+            skillColors: ["bg-[#373a44]"],
         },
         {
             id: 3,
@@ -33,8 +33,8 @@ export default function Project() {
             description: "Technologies I have used",
             image: "/images/project/dragon.png",
             link: "https://dragonbull.vercel.app/",
-            backgroundColor: "bg-new-yellow-600",
-            skillColors: ["bg-new-yellow-700"],
+            backgroundColor: "bg-[#f97316]",
+            skillColors: ["bg-[#b75717]"],
         },
     ];
 
