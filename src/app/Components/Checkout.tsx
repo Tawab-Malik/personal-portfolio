@@ -40,7 +40,7 @@ export default function Checkout() {
                             viewport={{ once: true }}
                             className="text-xl text-black dark:text-white text-center  font-semibold pt-5">Front End Developer / Web Designer / UI Developer</motion.p>
                         <div className=" flex sm:flex-row flex-col w-full sm:w-auto justify-center items-center gap-y-2 gap-x-1 md:gap-x-5 mt-8 relative z-10">
-                        <Link href="/images/abdultawab.pdf" target="_blank" >
+                        <Link href="/images/Abdul_TawabCV.pdf" target="_blank" >
                         <Button href="#" className=" text-[#995FB6] dark:text-new-yellow flex justify-center rounded-full text-sm md:text-lg bg-black dark:bg-[#241d0b] border-2 !py-2 h-auto !px-6 dark:border-new-yellow border-[#995FB6] items-center gap-x-2 font-semibold"><GoDownload className="dark:text-new-yellow text-[#995FB6] h-5 w-5" /> Resume</Button>
                         </Link>
                         <Link  href="#contact">

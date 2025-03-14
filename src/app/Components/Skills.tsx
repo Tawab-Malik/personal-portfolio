@@ -20,6 +20,7 @@ export default function Skills() {
         { id: 12, name: "Html5", image: "/images/skills/html.svg" },
         { id: 13, name: "CSS3", image: "/images/skills/css.svg" },
         { id: 14, name: "Framer Motion", image: "/images/skills/framermotion.svg" },
+        { id: 15, name: "React Native", image: "/images/skills/react.svg" },
     ];
 
     const tools = [
@@ -130,7 +131,7 @@ export default function Skills() {
 
                     {/*    button*/}
                     <div className=" flex justify-center mt-16">
-                        <Link href="/images/abdultawab.pdf" target="_blank" >
+                        <Link href="/images/Abdul_TawabCV.pdf" target="_blank" >
                         <Button className=" bg-[#995FB6] border-2  border-[#995FB6] dark:border-new-yellow  text-black flex justify-center rounded-full text-lg dark:hover:bg-new-yellow-700 dark:bg-new-yellow  !py-3 h-auto !px-6  items-center gap-x-2 font-semibold"><GoDownload
                                 className=" text-black h-5 w-5" /> Resume</Button>
                         </Link>

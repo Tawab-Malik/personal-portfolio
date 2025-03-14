@@ -145,6 +145,24 @@ export default function AllProjects() {
             backgroundColor: "bg-[#241246]",
             skillColors: ["bg-[#1a0d33]"],
         },
+        {
+            id: 15,
+            name: "Ether Ticket",
+            description: "Technologies I have used",
+            image: "/images/project/ether.png",
+            link: "https://etherticket-v2.vercel.app/",
+            backgroundColor: "bg-[#010220]",
+            skillColors: ["bg-[#4E3995]"],
+        },
+        {
+            id: 16,
+            name: "Borroe-Landing",
+            description: "Technologies I have used",
+            image: "/images/project/borroe2.png",
+            link: "https://borroe-landing.vercel.app/",
+            backgroundColor: "bg-[#0B111B]",
+            skillColors: ["bg-[#152748]"],
+        },
     ];
 
     const skills = [
@@ -227,7 +245,7 @@ export default function AllProjects() {
                                                 custom={index} // Pass index to the variant
                                                 variants={itemVariants}>
                                                 <Image src={skill.image} alt={skill.name} height={20} width={20} />
-                                                <p className="text-sm text-black font-semibold">{skill.name}</p>
+                                                <p className="text-sm dark:!text-white !text-black font-semibold">{skill.name}</p>
                                             </motion.div>
                                         ))}
                                     </div>
