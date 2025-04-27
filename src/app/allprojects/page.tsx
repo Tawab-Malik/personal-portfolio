@@ -163,6 +163,15 @@ export default function AllProjects() {
             backgroundColor: "bg-[#0B111B]",
             skillColors: ["bg-[#152748]"],
         },
+        {
+            id: 17,
+            name: "Ether-ticket",
+            description: "Technologies I have used",
+            image: "/images/project/ether-ticket.png",
+            link: "https://etherticket-v2.vercel.app/competition",
+            backgroundColor: "bg-[#01011E]",
+            skillColors: ["bg-[#152748]"],
+        },
     ];
 
     const skills = [
