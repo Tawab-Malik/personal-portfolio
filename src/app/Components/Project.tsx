@@ -87,7 +87,7 @@ export default function Project() {
 
                 {/* Project Cards */}
                 <motion.div
-                    className="grid gap-8 mt-20"
+                    className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mt-20"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -98,7 +98,7 @@ export default function Project() {
                             className={`rounded-2xl px-4 py-8 md:p-8 text-white ${project.backgroundColor}`}
                             variants={itemVariants}
                         >
-                            <div className="grid grid-cols-1 lg:grid-cols-2 md:space-x-6">
+                            <div className="grid grid-cols-1 md:gap-x-6">
                                 <Image
                                     src={project.image}
                                     alt={`${project.name} screenshot`}
@@ -106,10 +106,10 @@ export default function Project() {
                                     width={1000}
                                     className="w-full h-auto md:h-full bg-downriver-200 rounded-2xl shadow-lg"
                                 />
-                                <div className="mt-10 ml-0 lg:mt-0">
-                                    <h3 className="text-3xl font-bold">{project.name}</h3>
-                                    <p className="mt-2">{project.description}</p>
-                                    <div className="flex flex-wrap gap-3 justify-start items-center my-5">
+                                <div className="mt-10 ml-0 lg:mt-5">
+                                    <h3 className="text-3xl font-bold text-center">{project.name}</h3>
+                                    <p className="mt-2 text-center">{project.description}</p>
+                                    <div className="flex flex-wrap gap-3 justify-center items-center my-5">
                                         {skills.map((skill, index) => (
                                             <motion.div
                                                 key={skill.id}
@@ -123,7 +123,7 @@ export default function Project() {
                                             </motion.div>
                                         ))}
                                     </div>
-                                    <div className="flex justify-center md:justify-start">
+                                    <div className="flex justify-center ">
                                         <Link
                                             href={project.link}
                                             target="_blank"
