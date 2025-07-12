@@ -4,175 +4,9 @@ import Image from "next/image";
 import { HiLink } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { Button } from "@nextui-org/react";
-// import Compo from "../Components/compo2";
-// import { GoDownload } from "react-icons/go";
-// import { IoEyeSharp } from "react-icons/io5";
-
+import Projects from "@/components/Projects.json"
 export default function AllProjects() {
-    const projects = [
-        {
-            id: 1,
-            name: "Match-Maker Capital",
-            description: "Technologies I have used",
-            image: "/images/project/match.png",
-            link: "https://match-maker-dev.vercel.app/",
-            backgroundColor: "bg-wisteria-200 dark:bg-[#D43FDE]",
-            skillColors: ["bg-wisteria-500 dark:bg-[#af38b7]"],
-        },
-        {
-            id: 2,
-            name: "Scale Pass",
-            description: "Technologies I have used",
-            image: "/images/project/scalepass.png",
-            link: "https://scalepass-dev.vercel.app/",
-            backgroundColor: "bg-[#70d1b1] dark:bg-[#9ae0c9]",
-            skillColors: ["bg-[#57a88d] dark:bg-[#49aa8a]"],
-        },
-        {
-            id: 3,
-            name: "Dragon Bull Run",
-            description: "Technologies I have used",
-            image: "/images/project/dragon.png",
-            link: "https://dragonbull.vercel.app/",
-            backgroundColor: "bg-[#f97316]",
-            skillColors: ["bg-[#b75717]"],
-        },
-        {
-            id: 4,
-            name: "Flatcap Ape",
-            description: "Technologies I have used",
-            image: "/images/project/flatcap.png",
-            link: "https://flatcapape.vercel.app/",
-            backgroundColor: "bg-[#FF9000]",
-            skillColors: ["bg-[#c47009]"],
-        },
-        {
-            id: 5,
-            name: "Moon Rat",
-            description: "Technologies I have used",
-            image: "/images/project/moonrat.png",
-            link: "https://moonrat-dev.vercel.app/",
-            backgroundColor: "bg-[#F29C86]",
-            skillColors: ["bg-[#ce8573]"],
-        },
-        {
-            id: 6,
-            name: "Durag Dog",
-            description: "Technologies I have used",
-            image: "/images/project/duragdog.png",
-            link: "https://duragdoge.vercel.app/",
-            backgroundColor: "bg-[#1F4659]",
-            skillColors: ["bg-[#193744]"],
-        },
-        {
-            id: 7,
-            name: "Mythic Wings",
-            description: "Technologies I have used",
-            image: "/images/project/mythic.png",
-            link: "https://mythicwings.vercel.app/",
-            backgroundColor: "bg-[#63443F]",
-            skillColors: ["bg-[#543935]"],
-        },
-        {
-            id: 8,
-            name: "SatoshiDex",
-            description: "Technologies I have used",
-            image: "/images/project/stoshi.png",
-            link: "https://stoshi-dex.vercel.app/",
-            backgroundColor: "bg-[#241116]",
-            skillColors: ["bg-[#351a21]"],
-        },
-        {
-            id: 9,
-            name: "Uni-Bridge",
-            description: "Technologies I have used",
-            image: "/images/project/unibridge.png",
-            link: "https://uni-bridge-nine.vercel.app/",
-            backgroundColor: "bg-[#0D5857]",
-            skillColors: ["bg-[#093534]"],
-        },
-        {
-            id: 10,
-            name: "StratoNode",
-            description: "Technologies I have used",
-            image: "/images/project/stratonode.png",
-            link: "https://stratonode-two.vercel.app/",
-            backgroundColor: "bg-[#c9ab34]",
-            skillColors: ["bg-[#826e1f]"],
-        },
-        // {
-        //     id: 11,
-        //     name: "AI ChatBot",
-        //     description: "Technologies I have used",
-        //     image: "/images/project/chatbot.png",
-        //     link: "https://ai-assistant-chi-seven.vercel.app/",
-        //     backgroundColor: "bg-[#a2bc2f]",
-        //     skillColors: ["bg-[#74871f]"],
-        // },
-        {
-            id: 11,
-            name: "RollBlock",
-            description: "Technologies I have used",
-            image: "/images/project/rollblock.png",
-            link: "https://presale-rollblock.com/",
-            backgroundColor: "bg-[#FAC725]",
-            skillColors: ["bg-[#bf961c]"],
-        },
-        {
-            id: 12,
-            name: "RebelSatoshi",
-            description: "Technologies I have used",
-            image: "/images/project/satoshi.png",
-            link: "https://rebelsatoshi.com/",
-            backgroundColor: "bg-[#5B5F71]",
-            skillColors: ["bg-[#373a44]"],
-        },
-        {
-            id: 13,
-            name: "BUY RebelSatoshi",
-            description: "Technologies I have used",
-            image: "/images/project/satoshi2.png",
-            link: "https://rblz.rebelsatoshi.com/",
-            backgroundColor: "bg-[#A31B0C]",
-            skillColors: ["bg-[#5e110a]"],
-        },
-        {
-            id: 14,
-            name: "RECQ RebelSatoshi",
-            description: "Technologies I have used",
-            image: "/images/project/satoshi3.png",
-            link: "https://recq.rebelsatoshi.com/",
-            backgroundColor: "bg-[#241246]",
-            skillColors: ["bg-[#1a0d33]"],
-        },
-        {
-            id: 15,
-            name: "Ether Ticket",
-            description: "Technologies I have used",
-            image: "/images/project/ether.png",
-            link: "https://etherticket-v2.vercel.app/",
-            backgroundColor: "bg-[#010220]",
-            skillColors: ["bg-[#4E3995]"],
-        },
-        {
-            id: 16,
-            name: "Borroe-Landing",
-            description: "Technologies I have used",
-            image: "/images/project/borroe2.png",
-            link: "https://borroe-landing.vercel.app/",
-            backgroundColor: "bg-[#0B111B]",
-            skillColors: ["bg-[#152748]"],
-        },
-        {
-            id: 17,
-            name: "Ether-ticket",
-            description: "Technologies I have used",
-            image: "/images/project/ether-ticket.png",
-            link: "https://etherticket-v2.vercel.app/competition",
-            backgroundColor: "bg-[#01011E]",
-            skillColors: ["bg-[#152748]"],
-        },
-    ];
+   
 
     const skills = [
         { id: 1, name: "NextJS", image: "/images/skills/next.svg" },
@@ -228,7 +62,7 @@ export default function AllProjects() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true,}} >
-                    {projects.map((project) => (
+                    {Projects.map((project:any) => (
                         <motion.div
                             key={project.id}
                             className={`rounded-2xl px-4 py-8 md:p-8 text-white ${project.backgroundColor}`}
@@ -238,9 +72,9 @@ export default function AllProjects() {
                                 <Image
                                     src={project.image}
                                     alt={`${project.name} screenshot`}
-                                    height={1000}
-                                    width={1000}
-                                    className="w-full h-auto md:h-full bg-downriver-200 rounded-2xl shadow-lg"
+                                    height={500}
+                                    width={600}
+                                    className="w-full h-auto md:h-full rounded-2xl shadow-lg select-none"
                                 />
                                 <div className="mt-10 ml-0 lg:mt-0">
                                     <h3 className="text-3xl font-bold">{project.name}</h3>

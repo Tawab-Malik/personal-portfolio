@@ -10,13 +10,10 @@ import Project from "./Components/Project";
 import Checkout from "./Components/Checkout";
 import Connect from "./Components/Connect";
 import Contact from "./Components/Contact";
-// import PhotoCompare from "./Components/Swipe";
-
 export default function Home() {
   return (
     <>
       <NextUIProvider>
-      
         <Herosection />
         <About />
         <Education />
@@ -24,14 +21,9 @@ export default function Home() {
         <Skills />
         <Project />
         <Checkout />
-        {/* <div className="flex justify-center">
-              <PhotoCompare  originalImg="/images/orignal.jpeg"
-        avatarImg="/images/avatar.jpeg" />
-              </div> */}
         <Connect />
         <Contact/>
       </NextUIProvider>
-
     </>
   );
 }

@@ -1,0 +1,184 @@
+ [
+
+
+  {
+    "id": 1,
+    "name": "Match-Maker Capital",
+    "description": "Technologies I have used",
+    "image": "/images/project/match.png",
+    "link": "https://match-maker-dev.vercel.app/",
+    "backgroundColor": "bg-wisteria-200 dark:bg-[#D43FDE]",
+    "skillColors": ["bg-wisteria-500 dark:bg-[#af38b7]"]
+  },
+  {
+    "id": 2,
+    "name": "Scale Pass",
+    "description": "Technologies I have used",
+    "image": "/images/project/scalepass.png",
+    "link": "https://scalepass-dev.vercel.app/",
+    "backgroundColor": "bg-[#70d1b1] dark:bg-[#9ae0c9]",
+    "skillColors": ["bg-[#57a88d] dark:bg-[#49aa8a]"]
+  },
+  {
+    "id": 3,
+    "name": "Dragon Bull Run",
+    "description": "Technologies I have used",
+    "image": "/images/project/dragon.png",
+    "link": "https://dragonbull.vercel.app/",
+    "backgroundColor": "bg-[#f97316]",
+    "skillColors": ["bg-[#b75717]"]
+  },
+  {
+    "id": 4,
+    "name": "Flatcap Ape",
+    "description": "Technologies I have used",
+    "image": "/images/project/flatcap.png",
+    "link": "https://flatcapape.vercel.app/",
+    "backgroundColor": "bg-[#FF9000]",
+    "skillColors": ["bg-[#c47009]"]
+  },
+  {
+    "id": 5,
+    "name": "Moon Rat",
+    "description": "Technologies I have used",
+    "image": "/images/project/moonrat.png",
+    "link": "https://moonrat-dev.vercel.app/",
+    "backgroundColor": "bg-[#F29C86]",
+    "skillColors": ["bg-[#ce8573]"]
+  },
+  {
+    "id": 6,
+    "name": "Durag Dog",
+    "description": "Technologies I have used",
+    "image": "/images/project/duragdog.png",
+    "link": "https://duragdoge.vercel.app/",
+    "backgroundColor": "bg-[#1F4659]",
+    "skillColors": ["bg-[#193744]"]
+  },
+  {
+    "id": 7,
+    "name": "Mythic Wings",
+    "description": "Technologies I have used",
+    "image": "/images/project/mythic.png",
+    "link": "https://mythicwings.vercel.app/",
+    "backgroundColor": "bg-[#63443F]",
+    "skillColors": ["bg-[#543935]"]
+  },
+  {
+    "id": 8,
+    "name": "SatoshiDex",
+    "description": "Technologies I have used",
+    "image": "/images/project/stoshi.png",
+    "link": "https://stoshi-dex.vercel.app/",
+    "backgroundColor": "bg-[#241116]",
+    "skillColors": ["bg-[#351a21]"]
+  },
+  {
+    "id": 9,
+    "name": "Uni-Bridge",
+    "description": "Technologies I have used",
+    "image": "/images/project/unibridge.png",
+    "link": "https://uni-bridge-nine.vercel.app/",
+    "backgroundColor": "bg-[#0D5857]",
+    "skillColors": ["bg-[#093534]"]
+  },
+  {
+    "id": 10,
+    "name": "StratoNode",
+    "description": "Technologies I have used",
+    "image": "/images/project/stratonode.png",
+    "link": "https://stratonode-two.vercel.app/",
+    "backgroundColor": "bg-[#c9ab34]",
+    "skillColors": ["bg-[#826e1f]"]
+  },
+  {
+    "id": 11,
+    "name": "RollBlock",
+    "description": "Technologies I have used",
+    "image": "/images/project/rollblock.png",
+    "link": "https://presale-rollblock.com/",
+    "backgroundColor": "bg-[#FAC725]",
+    "skillColors": ["bg-[#bf961c]"]
+  },
+  {
+    "id": 12,
+    "name": "RebelSatoshi",
+    "description": "Technologies I have used",
+    "image": "/images/project/satoshi.png",
+    "link": "https://rebelsatoshi.com/",
+    "backgroundColor": "bg-[#5B5F71]",
+    "skillColors": ["bg-[#373a44]"]
+  },
+  {
+    "id": 13,
+    "name": "BUY RebelSatoshi",
+    "description": "Technologies I have used",
+    "image": "/images/project/satoshi2.png",
+    "link": "https://rblz.rebelsatoshi.com/",
+    "backgroundColor": "bg-[#A31B0C]",
+    "skillColors": ["bg-[#5e110a]"]
+  },
+  {
+    "id": 14,
+    "name": "RECQ RebelSatoshi",
+    "description": "Technologies I have used",
+    "image": "/images/project/satoshi3.png",
+    "link": "https://recq.rebelsatoshi.com/",
+    "backgroundColor": "bg-[#241246]",
+    "skillColors": ["bg-[#1a0d33]"]
+  },
+  {
+    "id": 15,
+    "name": "Ether Ticket",
+    "description": "Technologies I have used",
+    "image": "/images/project/ether.png",
+    "link": "https://etherticket-v2.vercel.app/",
+    "backgroundColor": "bg-[#010220]",
+    "skillColors": ["bg-[#4E3995]"]
+  },
+  {
+    "id": 16,
+    "name": "Borroe-Landing",
+    "description": "Technologies I have used",
+    "image": "/images/project/borroe2.png",
+    "link": "https://borroe-landing.vercel.app/",
+    "backgroundColor": "bg-[#0B111B]",
+    "skillColors": ["bg-[#152748]"]
+  },
+  {
+    "id": 17,
+    "name": "Ether-ticket",
+    "description": "Technologies I have used",
+    "image": "/images/project/ether-ticket.png",
+    "link": "https://etherticket-v2.vercel.app/competition",
+    "backgroundColor": "bg-[#01011E]",
+    "skillColors": ["bg-[#152748]"]
+  },
+  {
+    "id": 18,
+    "name": "Digi-Tap Presale",
+    "description": "Technologies I have used",
+    "image": "/images/project/digitap.png",
+    "link": "https://digitap-dev.vercel.app/",
+    "backgroundColor": "bg-[#020A10]",
+    "skillColors": ["bg-[#161F0D]"]
+  },
+  {
+    "id": 19,
+    "name": "Digi-Tap Main",
+    "description": "Technologies I have used",
+    "image": "/images/project/digimain.png",
+    "link": "https://digitap-mainsite.vercel.app/",
+    "backgroundColor": "bg-[#383D18]",
+    "skillColors": ["bg-[#b8860b]"]
+  },
+  {
+    "id": 20,
+    "name": "XRPEPE",
+    "description": "Technologies I have used",
+    "image": "/images/project/xrpepe.png",
+    "link": "https://xrpepe-dev.vercel.app/",
+    "backgroundColor": "bg-[#480E74]",
+    "skillColors": ["bg-[#090A33]"]
+  }
+]
