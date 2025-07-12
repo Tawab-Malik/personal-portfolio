@@ -83,7 +83,7 @@ export default function AllProjects() {
                                         {skills.map((skill, index) => (
                                             <motion.div
                                                 key={skill.id}
-                                                className={`${project.skillColors[index % project.skillColors.length]
+                                                className={`${project.skillColors[0]}
                                                 } w-full md:w-auto py-3 px-5 flex gap-x-2 items-center rounded-full hover:!-translate-y-2 duration-500`}
                                                 custom={index} // Pass index to the variant
                                                 variants={itemVariants}>
