@@ -19,7 +19,7 @@ export default function Home() {
         <Education />
         <Experience />
         <Skills />
-        <Project />
+        {/* <Project /> */}
         <Checkout />
         <Connect />
         <Contact/>
