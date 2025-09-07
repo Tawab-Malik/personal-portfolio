@@ -8,7 +8,7 @@ const skills = [
     { id: 2, name: "Facebook", image: "/images/social/facebook.png", url: "https://www.facebook.com/share/1MB5c1kn5E/", color: "#1877F2" },
     { id: 3, name: "Instagram", image: "/images/social/insta.png", url: "https://www.instagram.com/taw_abmalik/", color: "#E1306C" },
     { id: 4, name: "Linkedin", image: "/images/social/linkedin.png", url: "https://www.linkedin.com/in/abdul-tawab-78ab9525b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", color: "#0077B5" },
-    { id: 5, name: "tchannar5@gmail.com", image: "/images/social/gmail.png", url: "mailto:tchannar5@gmail.com", color: "#D14836" },
+    { id: 5, name: "tchannar5@gmail.com", image: "/images/social/gmail.png", url: "mailto:abdultawab218@gmail.com", color: "#D14836" },
 ];
 
 export default function Connect() {

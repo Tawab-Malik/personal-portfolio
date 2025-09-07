@@ -11,31 +11,23 @@ export default function Project() {
     const projects = [
         {
             id: 1,
-            name: "RollBlock",
+            name: "BlogPost",
             description: "Technologies I have used",
-            image: "/images/project/rollblock.png",
-            link: "https://presale-rollblock.com/",
-            backgroundColor: "bg-[#FAC725]",
-            skillColors: ["bg-[#bf961c]"],
+            image: "/images/project/firebase.png",
+            link: "https://personal-blogfirebase.vercel.app/",
+            backgroundColor: "bg-[#183354]",
+            skillColors: ["bg-[#335884]"],
         },
         {
             id: 2,
-            name: "RebelSatoshi",
+            name: "Instagram video Downloader",
             description: "Technologies I have used",
-            image: "/images/project/satoshi.png",
-            link: "https://rebelsatoshi.com/",
-            backgroundColor: "bg-[#5B5F71]",
-            skillColors: ["bg-[#373a44]"],
+            image: "/images/project/instagram.png",
+            link: "https://allin-one-downloader-9nly.vercel.app/",
+            backgroundColor: "bg-[#43006A]",
+            skillColors: ["bg-[#66016B]"],
         },
-        {
-            id: 3,
-            name: "Dragon Bull Run",
-            description: "Technologies I have used",
-            image: "/images/project/dragon.png",
-            link: "https://dragonbull.vercel.app/",
-            backgroundColor: "bg-[#f97316]",
-            skillColors: ["bg-[#b75717]"],
-        },
+       
     ];
 
     const skills = [
@@ -87,7 +79,7 @@ export default function Project() {
 
                 {/* Project Cards */}
                 <motion.div
-                    className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mt-20"
+                    className="grid md:grid-cols-2 max-w-4xl mx-auto gap-8 mt-20"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -102,9 +94,9 @@ export default function Project() {
                                 <Image
                                     src={project.image}
                                     alt={`${project.name} screenshot`}
-                                    height={1000}
-                                    width={1000}
-                                    className="w-full h-auto md:h-full bg-downriver-200 rounded-2xl shadow-lg"
+                                    height={350}
+                                    width={340}
+                                    className="w-full bg-downriver-200 rounded-2xl shadow-lg"
                                 />
                                 <div className="mt-10 ml-0 lg:mt-5">
                                     <h3 className="text-3xl font-bold text-center">{project.name}</h3>
@@ -140,14 +132,14 @@ export default function Project() {
                 </motion.div>
 
 
-                {/*    button*/}
+                   {/* button
                 <div className=" flex justify-center mt-16">
                     <Link  href="/allprojects">
                     <Button
                         className="  bg-[#995FB6] border-2  border-[#995FB6] dark:border-new-yellow  text-black flex justify-center rounded-full text-lg dark:hover:bg-new-yellow-700 dark:bg-new-yellow  !py-3 h-auto !px-6  items-center gap-x-2 font-semibold"><IoEyeSharp className=" text-black h-5 w-5" /> View All</Button>
                     </Link>
                     
-                </div>
+                </div> */}
             </div>
         </section>
     );

@@ -19,7 +19,7 @@ export default function About() {
                     viewport={{ once: true }}
                     className=" flex flex-col justify-center items-center relative">
                     <h2 className="  text-[45px] md:text-[55px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">About Me</h2>
-                    <h2 className="absolute top-5  text-5xl text-center font-bold text-java dark:text-new-yellow">About Me</h2>
+                    <h2 className="absolute top-5 text-5xl text-center font-bold text-java dark:text-new-yellow">About Me</h2>
                 </motion.div>
 
                 {/*    main div*/}
@@ -85,7 +85,7 @@ export default function About() {
                         </div>
                         {/*2nd*/}
                         <div className=" bg-[#F3F3F3] dark:bg-[#181818] py-10 px-5 md:px-10 rounded-[4rem] shadow-[0_2.2px_20px_#995FB6] duration-500  dark:shadow-[0_2.2px_20px_#FDBC52]">
-                            <h2 className=' text-3xl md:text-5xl font-bold text-[#995FB6] dark:text-new-yellow text-center'>15+</h2>
+                            <h2 className=' text-3xl md:text-5xl font-bold text-[#995FB6] dark:text-new-yellow text-center'>20+</h2>
                             <p className=" text-xl md:text-3xl font-bold text-black dark:text-white text-center py-3 ">Project <br></br>Completed </p>
                         </div>
                     </div>

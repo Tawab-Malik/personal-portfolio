@@ -25,61 +25,55 @@ export default function Experience() {
                     {/*    main card*/}
 
                     {/* App aura */}
-                    <div className="rounded-3xl  bg-white  text-new-yellow mt-20 mb-10 shadow-[0_2.2px_20px_#995FB6] duration-500  dark:shadow-[0_2.2px_20px_#FDBC52]">
+                    <div className="rounded-3xl bg-white text-new-yellow mt-20 mb-10 shadow-[0_2.2px_20px_#995FB6] duration-500 dark:shadow-[0_2.2px_20px_#FDBC52]">
                         <div className=" px-5 py-10">
-                            <div className=" flex md:flex-row flex-col gap-y-2 justify-start  md:justify-between items-start md:items-center ">
+                            <div className=" flex md:flex-row flex-col gap-y-2 justify-start md:justify-between items-start md:items-center">
                                 <div
-                                    className=" flex items-center flex-col justify-start bg-black py-2 px-6 rounded-full">
-                                    <p className=" text-wisteria dark:text-new-yellow text-lg md:text-xl md:text-start text-center font-bold">AppAura.net</p>
+                                    className="flex items-center flex-col justify-start bg-black py-2 px-6 rounded-full">
+                                    <p className="text-wisteria dark:text-new-yellow text-lg md:text-xl md:text-start text-center font-bold">AppAura.net</p>
                                     <div className="flex gap-x-2 items-center ">
-                                        <FaLocationDot className=" h-4 w-4 text-wisteria dark:text-new-yellow" />
+                                        <FaLocationDot className="h-4 w-4 text-wisteria dark:text-new-yellow" />
                                         <p className=" text-white text-sm font-bold">Lahore, Pakistan</p>
                                     </div>
 
                                 </div>
                                 <div>
                                     <div
-                                        className=" flex items-center justify-start gap-x-3 bg-wisteria-200 dark:bg-new-yellow-200 py-2 px-4 rounded-full">
+                                        className="flex items-center justify-start gap-x-3 bg-wisteria-200 dark:bg-new-yellow-200 py-2 px-4 rounded-full">
                                         <IoCalendarNumberSharp className=" text-black h-6 w-6" />
-                                        <p className="  text-xl text-black font-bold">APRIL 2025-PRESENT</p>
+                                        <p className="text-xl text-black font-bold">APRIL 2025-JULY</p>
                                     </div>
                                     <div className="g-wisteria-200 dark:bg-new-yellow-200 py-2 px-4 mt-2 rounded-full">
-                                            <p className="  text-xl text-black text-center font-bold ">Part Time</p>
+                                            <p className="text-xl text-black text-center font-bold">Part Time</p>
                                     </div>
                                 </div>
 
 
                             </div>
 
-                            {/*<div className=" flex gap-x-3 items-center my-5">*/}
-
-                            {/*    <p className=" text-black text-xl font-bold bg-[#E7E7E7] py-2 px-4 rounded-full">Bachelor's*/}
-                            {/*        Degree</p>*/}
-                            {/*    <p className=" text-black text-xl font-bold bg-[#E7E7E7] py-2 px-4 rounded-full">BSCs</p>*/}
-                            {/*</div>*/}
-                            <div className=" flex gap-x-3 items-center mt-5">
+                            <div className="flex gap-x-3 items-center mt-5">
                                 <Image src="/images/experience/appaura.png" alt="img" height={80}
                                     width={80} className="p-2 bg-wisteria dark:bg-new-yellow rounded-full" />
                                 <h2 className=" text-3xl text-black font-bold mt-5">Front End Developer</h2>
                             </div>
 
 
-                            <div className=" space-y-3 mt-5">
+                            <div className="space-y-3 mt-5">
 
-                                <div className=" flex gap-x-3 items-start">
+                                <div className="flex gap-x-3 items-start">
                                     <PiPaperPlaneRightFill
-                                        className=" text-wisteria dark:text-new-yellow min-w-4 min-h-4 h-5 w-5" />
+                                        className="text-wisteria dark:text-new-yellow min-w-4 min-h-4 h-5 w-5" />
                                     <p className="  text-base text-black font-medium">Developed dynamic, responsive UI components with a focus on performance and reusability using REACT.js</p>
                                 </div>
-                                <div className=" flex gap-x-3 items-start">
+                                <div className="flex gap-x-3 items-start">
                                     <PiPaperPlaneRightFill
-                                        className=" text-wisteria dark:text-new-yellow min-w-4 min-h-4 h-5 w-5" />
-                                    <p className="  text-base text-black font-medium">Collaborated closely with designers and backend developers to ensure seamless user experience and integration.</p>
+                                        className="text-wisteria dark:text-new-yellow min-w-4 min-h-4 h-5 w-5" />
+                                    <p className="text-base text-black font-medium">Collaborated closely with designers and backend developers to ensure seamless user experience and integration.</p>
                                 </div>
                                 <div className=" flex gap-x-3 items-start">
                                     <PiPaperPlaneRightFill
-                                        className=" text-wisteria dark:text-new-yellow min-w-4 min-h-4 h-5 w-5" />
-                                    <p className="  text-base text-black font-medium">Implemented modern features using React Hooks, Context API, and REST APIs to streamline data flow.</p>
+                                        className="text-wisteria dark:text-new-yellow min-w-4 min-h-4 h-5 w-5" />
+                                    <p className="text-base text-black font-medium">Implemented modern features using React Hooks, Context API, and REST APIs to streamline data flow.</p>
                                 </div>
                             </div>
                         </div>
