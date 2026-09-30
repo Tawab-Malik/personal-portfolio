@@ -1,133 +1,81 @@
-"use client"
-import MovingGradient from "@/components/ui/BGanimation";
-// import MovingBlobCard from "@/app/Components/BlobContainer";
-// import BlurryBlob from "@/components/ui/BlurBob";
-import { IoCalendarNumberSharp } from "react-icons/io5";
-import Image from "next/image";
-import {motion} from "framer-motion"
+"use client";
 
+import { motion } from "framer-motion";
+import { HiAcademicCap, HiCalendar, HiMapPin } from "react-icons/hi2";
 
+export default function Education() {
+  const degrees = [
+    {
+      degree: "Bachelor of Computer Application (BCA)",
+      institution: "The Islamia University of Bahawalpur",
+      period: "2020 — 2024",
+      location: "Bahawalpur, Pakistan",
+      description:
+        "Comprehensive coursework in Software Engineering, Data Structures, Web Development, Database Management, and Object-Oriented Programming.",
+    },
+    {
+      degree: "Intermediate in Computer Science (ICS)",
+      institution: "Punjab College",
+      period: "2018 — 2020",
+      location: "Bahawalpur, Pakistan",
+      description:
+        "Foundational education in Computer Fundamentals, Programming in C/C++, Mathematics, and Statistics.",
+    },
+  ];
 
+  return (
+    <section id="education" className="py-20 relative overflow-hidden bg-[#fafbfe]">
+      <div className="max-w-5xl mx-auto px-5 sm:px-8 relative z-10">
+        <div className="text-center max-w-xl mx-auto mb-14">
+          <span className="text-xs uppercase tracking-widest text-slate-500 font-bold">
+            / Academic Background
+          </span>
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 mt-2">
+            Education
+          </h2>
+        </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {degrees.map((deg, idx) => (
+            <motion.div
+              key={deg.degree}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.15 }}
+              className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/90 shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex flex-col justify-between hover:border-lime-400 transition-colors"
+            >
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-lime-400/20 text-lime-700 flex items-center justify-center mb-6">
+                  <HiAcademicCap className="w-6 h-6" />
+                </div>
 
-             export default function Education(){
-                        return(
-                            <>
-                                <section className=" dark:bg-black bg-white relative z-10 -mt-24 py-24">
-                                    <div className=" max-w-7xl mx-5 xl:mx-auto">
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">
+                    <HiCalendar className="w-3.5 h-3.5 text-lime-600" />
+                    {deg.period}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">
+                    <HiMapPin className="w-3.5 h-3.5 text-lime-600" />
+                    {deg.location}
+                  </span>
+                </div>
 
-                                        <motion.div
-                                        initial={{ y: 50 }}
-                                        whileInView={{ y: 0, transition: { duration: 0.6, type: "spring" ,stiffness: 50,damping: 15, } }}
-                                        viewport={{ once: true }}
-                                        className=" flex flex-col justify-center items-center relative">
-                                            <h2 className="  text-[45px] md:text-[55px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">Education</h2>
-                                            <h2 className="absolute top-5  text-5xl text-center font-bold text-java dark:text-new-yellow">Education</h2>
-                                        </motion.div>
+                <h3 className="text-xl font-bold text-slate-900 mb-1">
+                  {deg.degree}
+                </h3>
+                <p className="text-sm font-semibold text-lime-700 mb-4">
+                  {deg.institution}
+                </p>
 
-                                        {/*main div*/}
-                                        <div className=" grid grid-cols-1 lg:grid-cols-2 gap-5 mt-20 pb-5">
-
-                                        {/*    left div*/}
-                                            <MovingGradient className="rounded-3xl shadow-md bg-opacity-50 dark:bg-opacity-80   text-new-yellow">
-                                                <div className=" p-5">
-                                                    <div className=" flex md:flex-row flex-col gap-3 justify-start  md:justify-between items-start md:items-center ">
-                                                        <div
-                                                            className=" flex items-center justify-start gap-x-3 bg-black py-2 px-4 rounded-full">
-                                                            <IoCalendarNumberSharp className=" text-wisteria dark:text-new-yellow h-6 w-6"/>
-                                                            <p className=" text-wisteria dark:text-new-yellow text-xl font-bold">2018-2020</p>
-                                                        </div>
-                                                        <div
-                                                            className=" flex items-center justify-start gap-x-3 !bg-opacity-100 bg-[#fff0f5] dark:bg-white py-2 px-4 rounded-full">
-                                                            <Image src="/images/about/inter.png" alt="img" height={40}
-                                                                   width={40} className=""/>
-                                                            <p className="  text-xl text-black font-bold">Intermediate</p>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <div className=" flex md:flex-row flex-col gap-3 items-start md:items-center my-3 md:my-5">
-                                                        <p className=" text-black text-xl font-bold bg-[#fff0f5] dark:bg-white py-2 px-4 rounded-full">Inter
-                                                            Degree</p>
-                                                        <p className=" text-black text-xl font-bold bg-[#fff0f5] dark:bg-white py-2 px-4 rounded-full">Ics</p>
-                                                    </div>
-
-                                                    <h2 className=" text-3xl text-black font-bold mt-7 md:mt-5">Intermediate in Computer Science</h2>
-
-                                                    <div className=" space-y-3 mt-5">
-
-                                                        <div
-                                                            className=" flex items-center justify-start gap-x-3 ">
-                                                            <Image src="/images/about/university.png" alt="img" height={40}
-                                                                   width={40} className="p-2 bg-white rounded-full"/>
-                                                            <p className="  text-xl text-black font-medium">Government
-                                                                Post-Graduate College</p>
-                                                        </div>
-                                                        <div
-                                                            className=" flex items-center justify-start gap-x-3 ">
-                                                            <Image src="/images/about/location.png" alt="img" height={40}
-                                                                   width={40} className=" p-2 bg-white rounded-full"/>
-                                                            <p className="  text-xl text-black font-medium">Bahawalpur, Pakistan</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                            </MovingGradient>
-                                        {/*    right div*/}
-                                            <div className="rounded-3xl shadow-md  bg-[#f3f3f3] dark:bg-white  text-new-yellow">
-                                                <div className=" p-5">
-                                                    <div className=" flex md:flex-row flex-col gap-3 justify-start  md:justify-between items-start md:items-center ">
-                                                        <div
-                                                            className=" flex items-center justify-start gap-x-3 bg-black py-2 px-4 rounded-full">
-                                                            <IoCalendarNumberSharp className=" text-wisteria dark:text-new-yellow h-6 w-6"/>
-                                                            <p className=" text-wisteria dark:text-new-yellow text-xl font-bold">2020-2024</p>
-                                                        </div>
-                                                        <div
-                                                            className=" flex items-center justify-start gap-x-3 bg-wisteria-200 dark:bg-new-yellow-200 py-2 px-4 rounded-full">
-                                                            <Image src="/images/about/graduation.png" alt="img" height={40}
-                                                                   width={40} className=""/>
-                                                            <p className="  text-xl text-black font-bold">Graduation</p>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <div className=" flex md:flex-row flex-col gap-3 items-start md:items-center my-3 md:my-5">
-
-                                                        <p className=" text-black text-xl font-bold bg-[#E7E7E7] py-2 px-4 rounded-full">Bachelor's
-                                                            Degree</p>
-                                                        <p className=" text-black text-xl font-bold bg-[#E7E7E7] py-2 px-4 rounded-full">BSCs</p>
-                                                    </div>
-
-                                                    <h2 className=" text-3xl text-black font-bold mt-7 md:mt-5">Bachelor's in
-                                                        Computer Science</h2>
-
-                                                    <div className=" space-y-3 mt-5">
-
-                                                        <div
-                                                            className=" flex items-center justify-start gap-x-3 ">
-                                                            <Image src="/images/about/university.png" alt="img" height={40}
-                                                                   width={40} className="p-2 bg-white rounded-full"/>
-                                                            <p className="  text-xl text-black font-medium">Government
-                                                                Sadiq Egerton College</p>
-                                                        </div>
-                                                        <div
-                                                            className=" flex items-center justify-start gap-x-3 ">
-                                                            <Image src="/images/about/location.png" alt="img" height={40}
-                                                                   width={40} className=" p-2 bg-white rounded-full"/>
-                                                            <p className="  text-xl text-black font-medium">Bahawalpur, Pakistan</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-
-
-                                    </div>
-                                </section>
-                            </>
-                        )
-             }
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  {deg.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

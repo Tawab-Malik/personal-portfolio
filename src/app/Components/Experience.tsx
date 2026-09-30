@@ -1,160 +1,123 @@
-"use client"
-import { IoCalendarNumberSharp, } from "react-icons/io5";
-import Image from "next/image";
-import { PiPaperPlaneRightFill } from "react-icons/pi";
-import { FaLocationDot } from "react-icons/fa6";
-import { motion } from "framer-motion"
+"use client";
 
-
+import { motion } from "framer-motion";
+import { HiOutlineBriefcase, HiOutlineCalendar, HiOutlineMapPin, HiCheck } from "react-icons/hi2";
 
 export default function Experience() {
-    return (
-        <>
-            <section className=" dark:bg-black bg-white relative z-10 -mt-24 py-24">
-                <div className=" max-w-7xl mx-5 xl:mx-auto">
-                    <motion.div
-                        initial={{ y: 50 }}
-                        whileInView={{ y: 0, transition: { duration: 0.6, type: "spring", stiffness: 50, damping: 15, } }}
-                        viewport={{ once: true }}
-                        className=" flex flex-col justify-center items-center relative">
-                        <h2 className="  text-[45px] md:text-[55px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">Experience</h2>
-                        <h2 className="absolute top-5  text-5xl text-center font-bold text-java dark:text-new-yellow">Experience</h2>
-                    </motion.div>
+  const experiences = [
+    {
+      company: "Code Cradle Technologies",
+      role: "Frontend Developer",
+      type: "Full Time",
+      period: "May 2024 — Present",
+      location: "Bahawalpur, Pakistan",
+      highlights: [
+        "Architected and delivered over 10 production-ready React & Next.js applications with modern responsive design systems.",
+        "Led frontend engineering on Wired Academy, a full-stack Next.js project with dynamic routing, ISR, and API route integrations.",
+        "Collaborated with backend engineers to optimize RESTful endpoints and ensure sub-second page load speeds.",
+        "Mentored junior developers on Git workflows, TypeScript standards, and component reusability.",
+      ],
+      skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "REST APIs"],
+    },
+    {
+      company: "AppAura.net",
+      role: "Frontend Developer",
+      type: "Part Time",
+      period: "April 2025 — July 2025",
+      location: "Lahore, Pakistan",
+      highlights: [
+        "Engineered reactive UI components with an emphasis on performance, micro-interactions, and reusable architecture.",
+        "Collaborated closely with UI/UX designers to translate Figma design tokens into clean, maintainable Tailwind components.",
+        "Integrated state management with React Hooks, Context API, and third-party Web3 integrations.",
+      ],
+      skills: ["React.js", "Figma", "Tailwind CSS", "Context API", "Responsive Design"],
+    },
+  ];
 
+  return (
+    <section id="experience" className="py-24 relative overflow-hidden bg-[#fbfbfc]">
+      <div className="max-w-5xl mx-auto px-5 sm:px-8 relative z-10">
+        {/* Section Header */}
+        <div className="text-center max-w-xl mx-auto mb-16">
+          <span className="text-xs uppercase tracking-widest text-slate-500 font-bold">
+            / Career Journey
+          </span>
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 mt-2">
+            Work Experience
+          </h2>
+        </div>
 
-                    {/*    main card*/}
-
-                    {/* App aura */}
-                    <div className="rounded-3xl bg-white text-new-yellow mt-20 mb-10 shadow-[0_2.2px_20px_#995FB6] duration-500 dark:shadow-[0_2.2px_20px_#FDBC52]">
-                        <div className=" px-5 py-10">
-                            <div className=" flex md:flex-row flex-col gap-y-2 justify-start md:justify-between items-start md:items-center">
-                                <div
-                                    className="flex items-center flex-col justify-start bg-black py-2 px-6 rounded-full">
-                                    <p className="text-wisteria dark:text-new-yellow text-lg md:text-xl md:text-start text-center font-bold">AppAura.net</p>
-                                    <div className="flex gap-x-2 items-center ">
-                                        <FaLocationDot className="h-4 w-4 text-wisteria dark:text-new-yellow" />
-                                        <p className=" text-white text-sm font-bold">Lahore, Pakistan</p>
-                                    </div>
-
-                                </div>
-                                <div>
-                                    <div
-                                        className="flex items-center justify-start gap-x-3 bg-wisteria-200 dark:bg-new-yellow-200 py-2 px-4 rounded-full">
-                                        <IoCalendarNumberSharp className=" text-black h-6 w-6" />
-                                        <p className="text-xl text-black font-bold">APRIL 2025-JULY</p>
-                                    </div>
-                                    <div className="g-wisteria-200 dark:bg-new-yellow-200 py-2 px-4 mt-2 rounded-full">
-                                            <p className="text-xl text-black text-center font-bold">Part Time</p>
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-                            <div className="flex gap-x-3 items-center mt-5">
-                                <Image src="/images/experience/appaura.png" alt="img" height={80}
-                                    width={80} className="p-2 bg-wisteria dark:bg-new-yellow rounded-full" />
-                                <h2 className=" text-3xl text-black font-bold mt-5">Front End Developer</h2>
-                            </div>
-
-
-                            <div className="space-y-3 mt-5">
-
-                                <div className="flex gap-x-3 items-start">
-                                    <PiPaperPlaneRightFill
-                                        className="text-wisteria dark:text-new-yellow min-w-4 min-h-4 h-5 w-5" />
-                                    <p className="  text-base text-black font-medium">Developed dynamic, responsive UI components with a focus on performance and reusability using REACT.js</p>
-                                </div>
-                                <div className="flex gap-x-3 items-start">
-                                    <PiPaperPlaneRightFill
-                                        className="text-wisteria dark:text-new-yellow min-w-4 min-h-4 h-5 w-5" />
-                                    <p className="text-base text-black font-medium">Collaborated closely with designers and backend developers to ensure seamless user experience and integration.</p>
-                                </div>
-                                <div className=" flex gap-x-3 items-start">
-                                    <PiPaperPlaneRightFill
-                                        className="text-wisteria dark:text-new-yellow min-w-4 min-h-4 h-5 w-5" />
-                                    <p className="text-base text-black font-medium">Implemented modern features using React Hooks, Context API, and REST APIs to streamline data flow.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    {/* code cradle */}
-                    <div className="rounded-3xl  bg-white  text-new-yellow mt-20 mb-10 shadow-[0_2.2px_20px_#995FB6] duration-500  dark:shadow-[0_2.2px_20px_#FDBC52]">
-                        <div className=" px-5 py-10">
-                            <div className=" flex md:flex-row flex-col gap-y-2 justify-start  md:justify-between items-start md:items-center ">
-                                <div
-                                    className=" flex items-center flex-col justify-start bg-black py-2 px-6 rounded-full">
-                                    <p className=" text-wisteria dark:text-new-yellow text-lg md:text-xl md:text-start text-center font-bold">Code Cradle Technologies</p>
-                                    <div className="flex gap-x-2 items-center ">
-                                        <FaLocationDot className=" h-4 w-4 text-wisteria dark:text-new-yellow" />
-                                        <p className=" text-white text-sm font-bold">Bahawalpur, Pakistan</p>
-                                    </div>
-
-                                </div>
-                                <div>
-                                    <div
-                                        className=" flex items-center justify-start gap-x-3 bg-wisteria-200 dark:bg-new-yellow-200 py-2 px-4 rounded-full">
-                                        <IoCalendarNumberSharp className=" text-black h-6 w-6" />
-                                        <p className="  text-xl text-black font-bold">MAY 2024-PRESENT</p>
-                                    </div>
-                                    <div className="g-wisteria-200 dark:bg-new-yellow-200 py-2 px-4 mt-2 rounded-full">
-                                            <p className="  text-xl text-black text-center font-bold ">Full Time</p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            {/*<div className=" flex gap-x-3 items-center my-5">*/}
-
-                            {/*    <p className=" text-black text-xl font-bold bg-[#E7E7E7] py-2 px-4 rounded-full">Bachelor's*/}
-                            {/*        Degree</p>*/}
-                            {/*    <p className=" text-black text-xl font-bold bg-[#E7E7E7] py-2 px-4 rounded-full">BSCs</p>*/}
-                            {/*</div>*/}
-                            <div className=" flex gap-x-3 items-center mt-5">
-                                <Image src="/images/experience/programmer.png" alt="img" height={80}
-                                    width={80} className="p-2 bg-wisteria dark:bg-new-yellow rounded-full" />
-                                <h2 className=" text-3xl text-black font-bold mt-5">Front End Developer</h2>
-                            </div>
-
-
-                            <div className=" space-y-3 mt-5">
-
-                                <div className=" flex gap-x-3 items-start">
-                                    <PiPaperPlaneRightFill
-                                        className=" text-wisteria dark:text-new-yellow min-w-4 min-h-4 h-5 w-5" />
-                                    <p className="  text-base text-black font-medium">Designed and developed over
-                                        10 complete React and NextJS full theme templates, showcasing proficiency
-                                        in front-end design and development.</p>
-                                </div>
-                                <div className=" flex gap-x-3 items-start">
-                                    <PiPaperPlaneRightFill
-                                        className=" text-wisteria dark:text-new-yellow min-w-4 min-h-4 h-5 w-5" />
-                                    <p className="  text-base text-black font-medium">Led the development of the Wired Academy project, a full-stack NextJS application.</p>
-                                </div>
-                                <div className=" flex gap-x-3 items-start">
-                                    <PiPaperPlaneRightFill
-                                        className=" text-wisteria dark:text-new-yellow min-w-4 min-h-4 h-5 w-5" />
-                                    <p className="  text-base text-black font-medium">Managed both front-end and back-end aspects, utilizing NextJS API Routes for seamless integration.</p>
-                                </div>
-                                <div className=" flex gap-x-3 items-start">
-                                    <PiPaperPlaneRightFill
-                                        className=" text-wisteria dark:text-new-yellow min-w-4 min-h-4 h-5 w-5" />
-                                    <p className="  text-base text-black font-medium">Successfully deployed the application on Vercel for optimal performance and accessibility.</p>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
+        {/* Experience Cards */}
+        <div className="space-y-8">
+          {experiences.map((exp, idx) => (
+            <motion.div
+              key={exp.company}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: idx * 0.15 }}
+              className="bg-white p-7 sm:p-9 rounded-3xl border border-slate-200/90 shadow-[0_15px_35px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.07)] transition-all"
+            >
+              {/* Header row */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100">
+                <div>
+                  <div className="flex items-center gap-3 mb-1">
+                    <span className="p-2.5 rounded-xl bg-lime-400/20 text-lime-700">
+                      <HiOutlineBriefcase className="w-5 h-5" />
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
+                      {exp.role}
+                    </h3>
+                  </div>
+                  <p className="text-sm font-semibold text-slate-700">
+                    {exp.company}
+                  </p>
                 </div>
-            </section>
-        </>
-    )
 
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">
+                    <HiOutlineCalendar className="w-3.5 h-3.5 text-lime-600" />
+                    {exp.period}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">
+                    <HiOutlineMapPin className="w-3.5 h-3.5 text-lime-600" />
+                    {exp.location}
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-lime-400/25 text-lime-800 border border-lime-400/40">
+                    {exp.type}
+                  </span>
+                </div>
+              </div>
+
+              {/* Bullet highlights */}
+              <div className="mt-6 space-y-3">
+                {exp.highlights.map((point, pIdx) => (
+                  <div key={pIdx} className="flex items-start gap-3">
+                    <span className="w-5 h-5 rounded-full bg-lime-400/20 text-lime-700 flex items-center justify-center shrink-0 mt-0.5">
+                      <HiCheck className="w-3.5 h-3.5" />
+                    </span>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                      {point}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Skill Tags */}
+              <div className="flex flex-wrap gap-2 mt-6 pt-6 border-t border-slate-100">
+                {exp.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

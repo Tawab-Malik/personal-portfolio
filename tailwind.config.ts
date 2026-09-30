@@ -1,216 +1,90 @@
-const { nextui } = require("@nextui-org/react");
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
-const config = {
-  darkMode: 'class',
+const config: Config = {
+  darkMode: "class",
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
-    safelist: [
-  "bg-wisteria-200",
-  "dark:bg-[#D43FDE]",
-  "bg-wisteria-500",
-  "dark:bg-[#af38b7]",
-  "bg-[#70d1b1]",
-  "dark:bg-[#9ae0c9]",
-  "bg-[#57a88d]",
-  "dark:bg-[#49aa8a]",
-  "bg-[#f97316]",
-  "bg-[#b75717]",
-  "bg-[#FF9000]",
-  "bg-[#c47009]",
-  "bg-[#F29C86]",
-  "bg-[#ce8573]",
-  "bg-[#1F4659]",
-  "bg-[#193744]",
-  "bg-[#63443F]",
-  "bg-[#543935]",
-  "bg-[#241116]",
-  "bg-[#351a21]",
-  "bg-[#0D5857]",
-  "bg-[#093534]",
-  "bg-[#c9ab34]",
-  "bg-[#826e1f]",
-  "bg-[#FAC725]",
-  "bg-[#bf961c]",
-  "bg-[#5B5F71]",
-  "bg-[#373a44]",
-  "bg-[#A31B0C]",
-  "bg-[#5e110a]",
-  "bg-[#241246]",
-  "bg-[#1a0d33]",
-  "bg-[#010220]",
-  "bg-[#4E3995]",
-  "bg-[#0B111B]",
-  "bg-[#152748]",
-  "bg-[#01011E]",
-  "bg-[#020A10]",
-  "bg-[#161F0D]",
-  "bg-[#383D18]",
-  "bg-[#b8860b]",
-  "bg-[#480E74]",
-  "bg-[#090A33]",
-],
-  prefix: "",
   theme: {
-    boxShadow: {
-      'inner-lg': 'inset 0 5px 5px rgba(0, 0, 0, 0.1)', // Example custom shadow
-    },
-    colors: {
-      filter: {
-        "blur-20": "blur(20px)",
-        "blur-25": "blur(25px)",
-      },
-      'white': '#FFFFFF',
-      'black': '#000000',
-      'firefly': {
-        DEFAULT: '#0A1124',
-        50: '#3255B4',
-        100: '#2D4DA4',
-        200: '#253E84',
-        300: '#1C2F64',
-        400: '#132044',
-        500: '#0A1124',
-        600: '#000000',
-        700: '#000000',
-        800: '#000000',
-        900: '#000000',
-        950: '#000000'
-      },
-      'java': {
-        DEFAULT: '#1AAFB7',
-        50: '#98ECF0',
-        100: '#86E9EE',
-        200: '#63E2E9',
-        300: '#3FDBE4',
-        400: '#1FD1DB',
-        500: '#1AAFB7',
-        600: '#138086',
-        700: '#0C5155',
-        800: '#052224',
-        900: '#000000',
-        950: '#000000'
-      },
-      'downriver': {
-        DEFAULT: '#102762',
-        50: '#4873E1',
-        100: '#3766DE',
-        200: '#2151CB',
-        300: '#1B43A8',
-        400: '#163585',
-        500: '#102762',
-        600: '#081432',
-        700: '#000102',
-        800: '#000000',
-        900: '#000000',
-        950: '#000000'
-      },
-      'new-yellow': {
-        DEFAULT: '#FEB901',
-        50: '#FFEBB8',
-        100: '#FFE6A4',
-        200: '#FEDB7B',
-        300: '#FECF52',
-        400: '#FEC42A',
-        500: '#FEB901',
-        600: '#C69001',
-        700: '#8E6801',
-        800: '#563F00',
-        900: '#1E1600',
-        950: '#030200'
-      },
-      'wisteria': {
-        DEFAULT: '#995FB6',
-        50: '#E9DDF0',
-        100: '#E0CFE9',
-        200: '#CFB3DC',
-        300: '#BD97D0',
-        400: '#AB7BC3',
-        500: '#995FB6',
-        600: '#7C4598',
-        700: '#5D3471',
-        800: '#3D224B',
-        900: '#1E1024',
-        950: '#0E0811'
-      },
-    },
     container: {
+      center: true,
       padding: "2rem",
       screens: {
         "2xl": "1400px",
       },
     },
     extend: {
-      keyframes: {
-        "bg-position": {
-          "0%": { backgroundPosition: "0% 50%" },
-          "100%": { backgroundPosition: "100% 50%" },
+      fontFamily: {
+        sans: ["var(--font-sans)", "Montserrat", "sans-serif"],
+        serif: ["var(--font-serif)", "Playfair Display", "serif"],
+        display: ["var(--font-display)", "Playfair Display", "serif"],
+      },
+      colors: {
+        aura: {
+          lime: "#bef264",
+          green: "#4ade80",
+          glow: "#84cc16",
+          dark: "#0a0d0a",
         },
-        float: {
-          '0%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
-          '100%': { transform: 'translateY(0)' },
+        darkSurface: {
+          DEFAULT: "#0f1115",
+          card: "#16181e",
+          border: "rgba(255, 255, 255, 0.08)",
         },
-        wave: {
-          '0%': { transform: 'translateY(0) rotate(0deg)' },
-          '50%': { transform: 'translateY(-20px) rotate(-5deg)' },
-          '100%': { transform: 'translateY(0) rotate(0deg)' },
+        lightSurface: {
+          DEFAULT: "#fbfbfd",
+          card: "#ffffff",
+          border: "rgba(0, 0, 0, 0.06)",
         },
-        wave2: {
-          '0%': { transform: 'translateY(0) rotate(0deg)' },
-          '50%': { transform: 'translateY(-20px) rotate(5deg)' },
-          '100%': { transform: 'translateY(0) rotate(0deg)' },
+        // Legacy compatibility
+        firefly: {
+          DEFAULT: "#0A1124",
+          500: "#0A1124",
         },
-        "bob-1": {
-          "0%": { transform: "translate(0, 0) rotate(0deg)" },
-          "25%": { transform: "translate(30px, -15px) rotate(15deg)" },
-          "50%": { transform: "translate(-30px, 15px) rotate(-15deg)" },
-          "75%": { transform: "translate(30px, 5px) rotate(10deg)" },
-          "100%": { transform: "translate(0, 0) rotate(0deg)" },
+        java: {
+          DEFAULT: "#1AAFB7",
+          500: "#1AAFB7",
         },
-        "bob-2": {
-          "0%": { transform: "translate(0, 0) rotate(0deg)" },
-          "25%": { transform: "translate(-20px, 20px) rotate(-10deg)" },
-          "50%": { transform: "translate(20px, -20px) rotate(10deg)" },
-          "75%": { transform: "translate(-20px, 10px) rotate(-5deg)" },
-          "100%": { transform: "translate(0, 0) rotate(0deg)" },
+        "new-yellow": {
+          DEFAULT: "#FEB901",
+          200: "#FEDB7B",
+          500: "#FEB901",
+          700: "#8E6801",
+          900: "#1E1600",
         },
-        "pop-blob": {
-          "0%": { transform: "scale(1) " },
-          "33%": { transform: "scale(1.2)" },
-          "66%": { transform: "scale(0.8)" },
-          "100%": { transform: "scale(1)" },
-        },
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+        wisteria: {
+          DEFAULT: "#995FB6",
+          200: "#CFB3DC",
+          500: "#995FB6",
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        "pop-blob": "pop-blob 20s infinite",
-        "bob-1": "bob-1 15s ease-in-out infinite",
-        "bob-2": "bob-2 15s ease-in-out infinite",
-        float: 'float 3s ease-in-out infinite alternate',
-        wave: 'wave 3s ease-in-out infinite alternate',
-        wave2: 'wave2 3s ease-in-out infinite alternate',
-        bgposition: 'bg-position 3s ease-in-out infinite alternate',
+        float: "float 4s ease-in-out infinite alternate",
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        marquee: "marquee 28s linear infinite",
+        "marquee-reverse": "marquee-reverse 28s linear infinite",
+      },
+      keyframes: {
+        float: {
+          "0%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-12px)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "marquee-reverse": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),
-  require("tailwindcss-animate"),
-  nextui(),
-  require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [require("tailwindcss-animate")],
+};
 
-export default config
+export default config;

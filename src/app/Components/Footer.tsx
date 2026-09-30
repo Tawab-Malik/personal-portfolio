@@ -1,61 +1,87 @@
-"use client"
-import {motion} from "framer-motion";
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
+import { HiArrowUp } from "react-icons/hi2";
+import { SiGithub, SiLinkedin, SiWhatsapp, SiInstagram } from "react-icons/si";
 
+export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-export default function Footer(){
-    const skills = [
+  const socialLinks = [
+    { name: "GitHub", href: "https://github.com/Tawab-Malik", icon: SiGithub },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/abdul-tawab-78ab9525b",
+      icon: SiLinkedin,
+    },
+    { name: "WhatsApp", href: "https://wa.me/923074563133", icon: SiWhatsapp },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/taw_abmalik/",
+      icon: SiInstagram,
+    },
+  ];
 
-        { id: 1, name: "Figma", image: "/images/skills/figma.png" },
-        { id: 2, name: "NextJS", image: "/images/skills/next.svg" },
-        { id: 3, name: "Tailwind CSS", image: "/images/skills/tailwindcss.svg" },
-        { id: 4, name: "JavaScript", image: "/images/skills/javascript.svg" },
-        { id: 5, name: "Framer Motion", image: "/images/skills/framermotion.svg" },
-    ];
-                           return(
-                               <>
-                                 <footer className="dark:bg-black bg-white relative z-10 -mt-24 pb-12 pt-24">
-                                     <div className=" max-w-7xl mx-5 xl:mx-auto">
-                                         <motion.div
-                                             initial={{y: 50}}
-                                             whileInView={{y: 0,
-                                                 transition: {
-                                                     duration: 0.6,
-                                                     type: "spring",
-                                                     stiffness: 50,
-                                                     damping: 15,
-                                                 }
-                                             }}
-                                             viewport={{once: true}}
-                                             className=" flex flex-col justify-center items-center relative">
-                                             <h2 className="  text-[45px] md:text-[55px] drop-shadow-[0_1.2px_1.2px_#1aafb7] dark:drop-shadow-[0_1.2px_1.2px_#FDBC52] text-center font-bold text-white dark:text-black">Portfolio Made with</h2>
-                                             <h2 className="absolute top-5  text-5xl text-center font-bold text-java dark:text-new-yellow">Portfolio Made with</h2>
-                                         </motion.div>
+  return (
+    <footer className="pt-16 pb-12 border-t border-slate-200 bg-[#fbfbfc] relative z-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-slate-200">
+          {/* Brand */}
+          <div className="text-center md:text-left">
+            <Link href="/" className="inline-flex items-center gap-2">
+              <span className="font-serif italic text-3xl font-bold tracking-tight text-slate-900">
+                Abdul Tawab
+              </span>
+              <span className="font-sans text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-lime-400/25 text-lime-800 font-bold border border-lime-400/40">
+                2025
+              </span>
+            </Link>
+            <p className="text-xs text-slate-500 mt-2 max-w-sm font-normal">
+              Frontend Engineer specializing in scalable Next.js architectures, modern UI design systems, and responsive user experiences.
+            </p>
+          </div>
 
-                                         {/*    tech I use */}
-                                         <div
-                                             className="flex flex-wrap gap-5 justify-center items-center my-10 md:mx-20">
-                                             {skills.map((skill) => (
-                                                 <div
-                                                     key={skill.id}
-                                                     className="dark:bg-white bg-[#995FB6] w-full md:w-auto py-3 px-5 flex gap-x-4 items-center rounded-full hover:-translate-y-2 duration-500"
-                                                 >
-                                                     <Image src={skill.image} alt={skill.name} height={50}
-                                                            width={50} />
-                                                     <p className="text-xl text-black font-semibold">{skill.name}</p>
-                                                 </div>
-                                             ))}
-                                         </div>
+          {/* Social Links */}
+          <div className="flex items-center gap-3">
+            {socialLinks.map((s) => {
+              const Icon = s.icon;
+              return (
+                <Link
+                  key={s.name}
+                  href={s.href}
+                  target="_blank"
+                  aria-label={s.name}
+                  className="w-10 h-10 rounded-full flex items-center justify-center bg-white text-slate-600 hover:text-lime-700 hover:border-lime-400 transition-all border border-slate-200 shadow-sm"
+                >
+                  <Icon className="w-4 h-4" />
+                </Link>
+              );
+            })}
+          </div>
 
+          {/* Back to top button */}
+          <div>
+            <button
+              onClick={scrollToTop}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-slate-950 hover:border-lime-500 transition-all border border-slate-200 shadow-sm"
+            >
+              <span>Back to Top</span>
+              <HiArrowUp className="w-4 h-4 text-lime-600" />
+            </button>
+          </div>
+        </div>
 
-                                         <div className="flex items-center md:flex-row flex-col gap-y-2 justify-between !bg-[#995fb6] dark:!bg-new-yellow py-4 px-5 rounded-3xl mt-20">
-                                                 <Link href="/"> <span className=" ml-2 font-normal text-lg md:text-xl text-white dark:text-black">ABDUL<span
-                                                     className=" font-bold">TAWAB</span></span></Link>
-                                                 <p className=" text-base font-medium text-black">Designed & Built by Tawab Malikx</p>
-                                         </div>
-                                     </div>
-                                 </footer>
-                               </>
-                           )
+        {/* Copyright notice */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+          <p>&copy; {new Date().getFullYear()} Abdul Tawab. All rights reserved.</p>
+          <p className="flex items-center gap-1.5 font-medium">
+            <span>Crafted with</span>
+            <span className="font-semibold text-slate-800">Next.js 15, React 19 &amp; Tailwind CSS</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
 }

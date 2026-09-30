@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { HiLink } from "react-icons/hi";
 import { motion } from "framer-motion";
-import { Button } from "@nextui-org/react";
 import { useState } from "react";
 
 // import { GoDownload } from "react-icons/go";
@@ -252,10 +251,8 @@ export default function Compo() {
 
                 {/* Button */}
                 <div className="flex justify-center mt-16">
-                    <Link href="/#contact">
-                        <Button className="bg-[#995FB6] border-2 border-[#995FB6] dark:border-new-yellow text-black flex justify-center rounded-full text-lg dark:hover:bg-new-yellow-700 dark:bg-new-yellow !py-3 h-auto !px-6 items-center gap-x-2 font-semibold">
-                            Hire Me
-                        </Button>
+                    <Link href="/#contact" className="bg-[#995FB6] border-2 border-[#995FB6] dark:border-new-yellow text-black flex justify-center rounded-full text-lg dark:hover:bg-new-yellow-700 dark:bg-new-yellow py-3 px-6 items-center gap-x-2 font-semibold">
+                        Hire Me
                     </Link>
                 </div>
             </div>

@@ -1,223 +1,298 @@
 "use client";
+
 import { useState } from "react";
-import { Input } from "@nextui-org/input";
-import { IoPersonOutline } from "react-icons/io5";
-import { LuMailOpen } from "react-icons/lu";
-import { Textarea } from "@nextui-org/input";
-import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
-import { Button } from "@nextui-org/react";
-import { PiPaperPlaneRightLight } from "react-icons/pi";
-// import { GoDownload } from "react-icons/go";
-import Image from "next/image";
-// import LottieIframeComponent from "@/app/Components/Lottieanimation";
+import { motion, AnimatePresence } from "framer-motion";
+import { HiOutlineUser, HiOutlineEnvelope, HiOutlinePhone, HiOutlineChatBubbleBottomCenterText, HiArrowUpRight } from "react-icons/hi2";
+import { SiWhatsapp, SiLinkedin, SiGithub, SiGmail } from "react-icons/si";
+import { GoDownload } from "react-icons/go";
+import Link from "next/link";
 
 export default function Contact() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-    });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
 
-    const [status, setStatus] = useState("");
-    const [popupVisible, setPopupVisible] = useState(false);
+  const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [popupVisible, setPopupVisible] = useState(false);
 
-    const handleChange = (e: any) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
-    const handleSubmit = async (e: any) => {
-        e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-        // Check if all required fields are filled
-        if (!formData.name || !formData.email || !formData.phone || !formData.subject || !formData.message) {
-            setStatus("Please fill in all required fields.");
-            setPopupVisible(true);
-            setTimeout(() => {
-                setPopupVisible(false);
-            }, 3000);
-            return;
-        }
+    if (!formData.name || !formData.email || !formData.message) {
+      setStatus("Please fill in your name, email, and message.");
+      setPopupVisible(true);
+      setTimeout(() => setPopupVisible(false), 3500);
+      return;
+    }
 
-        setStatus("Sending...");
-        setPopupVisible(true);
+    setIsSubmitting(true);
+    setStatus("Sending message...");
+    setPopupVisible(true);
 
-        try {
-            const response = await fetch("/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
-            });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-            if (response.ok) {
-                setStatus("Email sent successfully!");
-                setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-            } else {
-                setStatus("Failed to send email.");
-            }
-        } catch (error) {
-            setStatus("An error occurred. Please try again.");
-        }
+      if (response.ok) {
+        setStatus("Message sent successfully! I'll get back to you within 24 hours.");
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      } else {
+        setStatus("Failed to send email. Please reach out directly via WhatsApp or Email.");
+      }
+    } catch (error) {
+      setStatus("An error occurred. Please contact directly via WhatsApp or Email.");
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setPopupVisible(false), 4000);
+    }
+  };
 
-        // Automatically hide the popup after 3 seconds
-        setTimeout(() => {
-            setPopupVisible(false);
-        }, 3000);
-    };
+  const directContacts = [
+    {
+      name: "WhatsApp",
+      handle: "+92 307 4563133",
+      href: "https://wa.me/923074563133",
+      icon: SiWhatsapp,
+      color: "hover:text-[#25D366]",
+    },
+    {
+      name: "Email",
+      handle: "abdultawab218@gmail.com",
+      href: "mailto:abdultawab218@gmail.com",
+      icon: SiGmail,
+      color: "hover:text-[#EA4335]",
+    },
+    {
+      name: "LinkedIn",
+      handle: "in/abdul-tawab-78ab9525b",
+      href: "https://www.linkedin.com/in/abdul-tawab-78ab9525b",
+      icon: SiLinkedin,
+      color: "hover:text-[#0A66C2]",
+    },
+    {
+      name: "GitHub",
+      handle: "Tawab-Malik",
+      href: "https://github.com/Tawab-Malik",
+      icon: SiGithub,
+      color: "hover:text-black",
+    },
+  ];
 
-    return (
-        <>
-            <section className="dark:bg-black bg-white relative z-10 -mt-24 pt-24 md:py-24" id="contact">
-                <div className="max-w-7xl mx-5 xl:mx-auto bg-[#f3f3f3] dark:bg-white rounded-3xl py-20 px-5 md:px-10">
-                    <h2 className="text-4xl md:text-5xl text-black font-bold text-center">Contact Me</h2>
-                    <form onSubmit={handleSubmit}>
-                        <div className="space-y-5 mt-10">
-                            {/* 1st */}
-                            <div className="flex md:flex-row flex-col justify-between gap-5">
-                                <Input
-                                    name="name"
-                                    type="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    placeholder="Full Name *"
-                                    isRequired
-                                    className="outline-none border-1 border-[#d4d4d4] shadow-inner-lg rounded-2xl text-[#65656D]"
-                                    classNames={{
-                                        inputWrapper:
-                                            'bg-transparent !shadow-none h-auto group[data-focus="true"] group-data-[focus=true]:bg-transparent data-[hover=true]:bg-transparent',
-                                        input:
-                                            'group[data-has-value="true"] group-data-[has-value=true]:!text-[#27272a] text-base',
-                                        innerWrapper: 'gap-x-2 !py-3 h-auto',
-                                    }}
-                                    startContent={
-                                        <IoPersonOutline className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                                    }
-                                />
-                                {/* email */}
-                                <Input
-                                    name="email"
-                                    type="email"
-                                    isRequired
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    placeholder="Email *"
-                                    className="outline-none border-1 border-[#d4d4d4] shadow-inner-lg rounded-2xl"
-                                    classNames={{
-                                        inputWrapper:
-                                            'bg-transparent !shadow-none h-auto group[data-focus="true"] group-data-[focus=true]:bg-transparent, data-[hover=true]:bg-transparent',
-                                        input:
-                                            'group[data-has-value="true"] group-data-[has-value=true]:!text-[#27272a] text-base',
-                                        innerWrapper: ' !py-3 gap-x-2',
-                                    }}
-                                    startContent={
-                                        <LuMailOpen className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                                    }
-                                />
-                            </div>
-                            {/* 2nd */}
-                            <div className="flex md:flex-row flex-col justify-between gap-5">
-                                <Input
-                                    name="phone"
-                                    type="number"
-                                    isRequired
-                                    value={formData.phone}
-                                    onChange={handleChange}
-                                    placeholder="Mobile No *"
-                                    className="outline-none border-1 border-[#d4d4d4] shadow-inner-lg rounded-2xl"
-                                    classNames={{
-                                        inputWrapper:
-                                            'bg-transparent !shadow-none h-auto group[data-focus="true"] group-data-[focus=true]:bg-transparent, data-[hover=true]:bg-transparent',
-                                        input:
-                                            'group[data-has-value="true"] group-data-[has-value=true]:!text-[#27272a] text-base',
-                                        innerWrapper: 'gap-x-2 !py-3',
-                                    }}
-                                    startContent={
-                                        <HiOutlineDevicePhoneMobile className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                                    }
-                                />
-                                {/* subject */}
-                                <Input
-                                    name="subject"
-                                    type="text"
-                                    isRequired
-                                    value={formData.subject}
-                                    onChange={handleChange}
-                                    placeholder="Subject *"
-                                    className="outline-none border-1 border-[#d4d4d4] shadow-inner-lg rounded-2xl"
-                                    classNames={{
-                                        inputWrapper:
-                                            'bg-transparent h-auto !shadow-none group[data-focus="true"] group-data-[focus=true]:bg-transparent, data-[hover=true]:bg-transparent',
-                                        input:
-                                            'text-sm group[data-has-value="true"] group-data-[has-value=true]:text-[#27272a] text-base',
-                                        innerWrapper: 'gap-x-2 !py-3',
-                                    }}
-                                />
-                            </div>
-                            {/* detail message */}
-                            <Textarea
-                                isRequired
-                                name="message"
-                                type="text"
-                                value={formData.message}
-                                onChange={handleChange}
-                                placeholder="Message *"
-                                rows={7}
-                                className="outline-none border-1 border-[#d4d4d4] shadow-inner-lg rounded-2xl text-base !h-auto"
-                                style={{ height: 'auto ' }}
-                                classNames={{
-                                    inputWrapper:
-                                        'bg-transparent h-auto !shadow-none group[data-focus="true"] group-data-[focus=true]:bg-transparent data-[hover=true]:bg-transparent',
-                                    input:
-                                        '!h-auto py-2 text-sm group[data-has-value="true"] group-data-[has-value=true]:text-[#27272a] text-base',
-                                }}
-                            />
+  return (
+    <section id="contact" className="py-24 relative overflow-hidden bg-white border-t border-slate-200/80">
+      {/* Background ambient lighting */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[600px] h-[350px] pointer-events-none z-0">
+        <div className="w-full h-full rounded-full bg-lime-400/20 blur-[110px]" />
+      </div>
 
-                            <div className="flex justify-start items-center gap-x-1 md:gap-x-5 mt-8 relative z-10">
-                                <Button
-                                    type="submit"
-                                    className="h-auto bg-[#995FB6] dark:bg-new-yellow dark:hover:bg-new-yellow-700 text-black flex justify-center rounded-full text-sm md:text-lg border-2 !py-2 !px-8 border-[#995FB6] dark:border-new-yellow items-center font-semibold gap-x-2"
-                                >
-                                    Send <PiPaperPlaneRightLight className="h-5 w-5 text-black" />
-                                </Button>
-                            </div>
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="text-xs uppercase tracking-widest text-slate-500 font-bold">
+            / Let&apos;s Connect
+          </span>
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 mt-2">
+            Have a project in mind?
+          </h2>
+          <p className="text-sm sm:text-base text-slate-600 mt-4 leading-relaxed font-normal">
+            Whether you need a complete web application built from scratch, a UI redesign, or a senior frontend engineer for your team, let&apos;s discuss how I can help.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Left Column: Direct Links & Resume Card */}
+          <div className="lg:col-span-5 space-y-6">
+            <div className="bg-[#fafbfe] p-7 sm:p-8 rounded-3xl border border-slate-200/90 shadow-[0_15px_35px_rgba(0,0,0,0.03)]">
+              <h3 className="text-xl font-bold text-slate-900 mb-2">
+                Direct Channels
+              </h3>
+              <p className="text-xs text-slate-500 mb-6 font-normal">
+                Feel free to ping me directly. I respond quickly.
+              </p>
+
+              <div className="space-y-3">
+                {directContacts.map((contact) => {
+                  const Icon = contact.icon;
+                  return (
+                    <Link
+                      key={contact.name}
+                      href={contact.href}
+                      target="_blank"
+                      className={`flex items-center justify-between p-3.5 rounded-2xl bg-white border border-slate-200/80 hover:border-lime-500/70 hover:shadow-sm transition-all group ${contact.color}`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <Icon className="w-5 h-5 text-slate-600 group-hover:text-lime-600 transition-colors" />
+                        <div>
+                          <p className="text-xs font-bold text-slate-900">
+                            {contact.name}
+                          </p>
+                          <p className="text-[11px] text-slate-500 font-mono">
+                            {contact.handle}
+                          </p>
                         </div>
-                    </form>
+                      </div>
+                      <HiArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-slate-900 transition-colors" />
+                    </Link>
+                  );
+                })}
+              </div>
 
-                    {/* Display status message */}
-                    {popupVisible && (
-                        <div
-                            className={`fixed mx-5 max-w-[400px] md:mx-auto top-0 left-0 right-0 rounded-3xl z-20 p-4 bg-wisteria dark:bg-new-yellow ${
-                                status.includes("success") ? "bg-green-500" : "bg-red-500"
-                            } text-black text-center`}
-                        >
-                            <p>{status}</p>
-                        </div>
-                    )}
+              {/* CV Download banner */}
+              <div className="mt-8 pt-6 border-t border-slate-200">
+                <Link
+                  href="/images/Abdul_TawabCV.pdf"
+                  target="_blank"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-slate-950 text-white font-bold text-xs uppercase tracking-wider hover:bg-slate-800 active:scale-95 transition-all shadow-md"
+                >
+                  <GoDownload className="w-4 h-4 text-lime-400" />
+                  <span>Download Curriculum Vitae (CV)</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Interactive Form */}
+          <div className="lg:col-span-7">
+            <div className="bg-[#fafbfe] p-7 sm:p-8 rounded-3xl border border-slate-200/90 shadow-[0_15px_35px_rgba(0,0,0,0.03)] relative">
+              <h3 className="text-xl font-bold text-slate-900 mb-6">
+                Send a Message
+              </h3>
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {/* Name Input */}
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      Your Name *
+                    </label>
+                    <div className="relative">
+                      <HiOutlineUser className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        placeholder="John Doe"
+                        className="w-full pl-10 pr-4 py-3 rounded-2xl bg-white border border-slate-200 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500 shadow-inner transition-all"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Email Input */}
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      Your Email *
+                    </label>
+                    <div className="relative">
+                      <HiOutlineEnvelope className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        placeholder="john@example.com"
+                        className="w-full pl-10 pr-4 py-3 rounded-2xl bg-white border border-slate-200 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500 shadow-inner transition-all"
+                      />
+                    </div>
+                  </div>
                 </div>
 
-                <div className="max-w-7xl mx-5 md:mx-auto flex justify-center md:justify-end md:-mt-[240px] md:pr-10">
-                    <Image
-                        src="/images/contact/contactdark.png"
-                        className="dark:hidden block"
-                        alt="logo"
-                        height={100}
-                        width={200}
-                    />
-                    <Image
-                        src="/images/contact/contactlight.png"
-                        className="dark:block hidden"
-                        alt="logo"
-                        height={100}
-                        width={200}
-                    />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {/* Phone */}
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      Phone Number (Optional)
+                    </label>
+                    <div className="relative">
+                      <HiOutlinePhone className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="+1 (555) 000-0000"
+                        className="w-full pl-10 pr-4 py-3 rounded-2xl bg-white border border-slate-200 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500 shadow-inner transition-all"
+                      />
+                    </div>
+                  </div>
 
-                    {/*<LottieIframeComponent />*/}
+                  {/* Subject */}
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      Subject
+                    </label>
+                    <div className="relative">
+                      <HiOutlineChatBubbleBottomCenterText className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                      <input
+                        type="text"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        placeholder="New Project Inquiry"
+                        className="w-full pl-10 pr-4 py-3 rounded-2xl bg-white border border-slate-200 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500 shadow-inner transition-all"
+                      />
+                    </div>
+                  </div>
                 </div>
 
+                {/* Message */}
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                    Your Message *
+                  </label>
+                  <textarea
+                    name="message"
+                    rows={4}
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    placeholder="Tell me about your project scope, timeline, and goals..."
+                    className="w-full p-4 rounded-2xl bg-white border border-slate-200 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500 shadow-inner transition-all resize-none"
+                  />
+                </div>
 
-            </section>
-        </>
-    );
+                {/* Submit button */}
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full py-4 rounded-full bg-slate-950 text-white font-bold text-xs uppercase tracking-wider hover:bg-slate-800 active:scale-95 disabled:opacity-50 transition-all shadow-md flex items-center justify-center gap-2"
+                >
+                  {isSubmitting ? "Sending..." : "Send Message ↗"}
+                </button>
+              </form>
+
+              {/* Status Alert Notification */}
+              <AnimatePresence>
+                {popupVisible && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="mt-4 p-3 rounded-2xl bg-lime-100 border border-lime-300 text-lime-900 text-center text-xs font-semibold"
+                  >
+                    {status}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
