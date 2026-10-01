@@ -40,11 +40,11 @@ export default function Header() {
         }`}
       >
         {/* Brand / Logo matching reference */}
-        <Link href="/" className="group flex items-center gap-2">
-          <span className="inline-block font-serif italic text-2xl font-bold tracking-tight text-slate-900 group-hover:text-lime-700 transition-colors pr-2 py-0.5">
+        <Link href="/" className="group flex items-center gap-2 shrink-0">
+          <span className="inline-block font-serif italic text-xl sm:text-2xl font-bold tracking-tight text-slate-900 group-hover:text-lime-700 transition-colors whitespace-nowrap pr-1.5 py-0.5">
             Abdul Tawab
           </span>
-          <span className="font-sans text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-lime-400/25 text-lime-900 font-extrabold border border-lime-400/50 shadow-2xs">
+          <span className="hidden sm:inline-block font-sans text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-lime-400/25 text-lime-900 font-extrabold border border-lime-400/50 shadow-2xs">
             Portfolio
           </span>
         </Link>
@@ -63,10 +63,10 @@ export default function Header() {
         </nav>
 
         {/* Right CTA */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <Link
             href="#contact"
-            className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-bold tracking-wide uppercase bg-gradient-to-r from-slate-950 via-slate-900 to-black text-white hover:scale-105 active:scale-95 shadow-[0_4px_16px_rgba(15,23,42,0.2)] hover:shadow-lime-500/20 transition-all duration-200 border border-white/10"
+            className="hidden sm:inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-bold tracking-wide uppercase bg-gradient-to-r from-slate-950 via-slate-900 to-black text-white hover:scale-105 active:scale-95 shadow-[0_4px_16px_rgba(15,23,42,0.2)] hover:shadow-lime-500/20 transition-all duration-200 border border-white/10"
           >
             <span>Let&apos;s Talk</span>
             <GoArrowUpRight className="w-3.5 h-3.5 text-lime-400" />
@@ -76,7 +76,7 @@ export default function Header() {
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
-            className="md:hidden w-10 h-10 rounded-full flex items-center justify-center bg-slate-100 text-slate-900 hover:bg-slate-200 transition-colors"
+            className="md:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center bg-slate-100 text-slate-900 hover:bg-slate-200 transition-colors shrink-0"
           >
             {menuOpen ? <HiX className="w-5 h-5" /> : <HiMenuAlt4 className="w-5 h-5" />}
           </button>
@@ -104,14 +104,24 @@ export default function Header() {
                   {link.name}
                 </Link>
               ))}
-              <Link
-                href="/images/Abdul_TawabCV.pdf"
-                target="_blank"
-                onClick={() => setMenuOpen(false)}
-                className="mt-2 py-3 rounded-full bg-lime-400 text-slate-950 font-bold text-xs tracking-wider uppercase shadow-md transition-all"
-              >
-                Download Resume (CV)
-              </Link>
+              <div className="pt-2 border-t border-slate-100 flex flex-col gap-2">
+                <Link
+                  href="#contact"
+                  onClick={() => setMenuOpen(false)}
+                  className="py-3 rounded-full bg-slate-950 text-white font-bold text-xs tracking-wider uppercase shadow-md flex items-center justify-center gap-1.5"
+                >
+                  <span>Let&apos;s Talk</span>
+                  <GoArrowUpRight className="w-3.5 h-3.5 text-lime-400" />
+                </Link>
+                <Link
+                  href="/images/Abdul_TawabCV.pdf"
+                  target="_blank"
+                  onClick={() => setMenuOpen(false)}
+                  className="py-3 rounded-full bg-lime-400 text-slate-950 font-bold text-xs tracking-wider uppercase shadow-sm transition-all"
+                >
+                  Download Resume (CV)
+                </Link>
+              </div>
             </nav>
           </motion.div>
         )}
