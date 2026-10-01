@@ -11,61 +11,62 @@ export default function Project() {
   const [activeFilter, setActiveFilter] = useState("all");
 
   const projects = [
-    {
-      id: 1,
-      name: "Match-Maker Capital",
-      category: "Fintech",
-      subcategory: "Product Design",
-      description:
-        "High-performance investment platform with real-time portfolio tracking, responsive dashboard architecture, and smooth data visualization.",
-      image: "/images/project/match.png",
-      link: "https://match-maker-dev.vercel.app/",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    },
-    {
-      id: 2,
-      name: "Scale Pass",
-      category: "SaaS",
-      subcategory: "Web App",
-      description:
-        "Enterprise subscription and licensing dashboard featuring complex authentication, permission flows, and unified layout systems.",
-      image: "/images/project/scalepass.png",
-      link: "https://scalepass-dev.vercel.app/",
-      tags: ["React 19", "Framer Motion", "Tailwind"],
-    },
-    {
-      id: 3,
-      name: "Moon Rat DeFi",
-      category: "Web3",
-      subcategory: "DeFi Platform",
-      description:
-        "Decentralized token platform with real-time liquidity pools, wallet connect integration, and high-frequency trading animations.",
-      image: "/images/project/moonrat.png",
-      link: "https://moonrat-dev.vercel.app/",
-      tags: ["Web3.js", "Next.js", "Ethers.js"],
-    },
+    // {
+    //   id: 1,
+    //   name: "Match-Maker Capital",
+    //   category: "Fintech",
+    //   subcategory: "Product Design",
+    //   description:
+    //     "High-performance investment platform with real-time portfolio tracking, responsive dashboard architecture, and smooth data visualization.",
+    //   image: "/images/project/match.png",
+    //   link: "https://match-maker-dev.vercel.app/",
+    //   tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    // },
+    // {
+    //   id: 2,
+    //   name: "Scale Pass",
+    //   category: "SaaS",
+    //   subcategory: "Web App",
+    //   description:
+    //     "Enterprise subscription and licensing dashboard featuring complex authentication, permission flows, and unified layout systems.",
+    //   image: "/images/project/scalepass.png",
+    //   link: "https://scalepass-dev.vercel.app/",
+    //   tags: ["React 19", "Framer Motion", "Tailwind"],
+    // },
+    // {
+    //   id: 3,
+    //   name: "Moon Rat DeFi",
+    //   category: "Web3",
+    //   subcategory: "DeFi Platform",
+    //   description:
+    //     "Decentralized token platform with real-time liquidity pools, wallet connect integration, and high-frequency trading animations.",
+    //   image: "/images/project/moonrat.png",
+    //   link: "https://moonrat-dev.vercel.app/",
+    //   tags: ["Web3.js", "Next.js", "Ethers.js"],
+    // },
+    // {
+    //   id: 4,
+    //   name: "Durag Dog Ecosystem",
+    //   category: "Web3",
+    //   subcategory: "Interactive Experience",
+    //   description:
+    //     "Creative Web3 brand experience with custom micro-interactions, responsive 3D assets, and community token launchpad.",
+    //   image: "/images/project/duragdog.png",
+    //   link: "https://duragdoge.vercel.app/",
+    //   tags: ["React", "Tailwind CSS", "Animations"],
+    // },
     {
       id: 4,
-      name: "Durag Dog Ecosystem",
-      category: "Web3",
-      subcategory: "Interactive Experience",
+      name: "Media Downloader",
+      category: "SaaS",
+      subcategory: "Full-Stack",
       description:
-        "Creative Web3 brand experience with custom micro-interactions, responsive 3D assets, and community token launchpad.",
-      image: "/images/project/duragdog.png",
-      link: "https://duragdoge.vercel.app/",
-      tags: ["React", "Tailwind CSS", "Animations"],
-    },
-    {
-      id: 5,
-      name: "Uni-Bridge Protocol",
-      category: "Web3",
-      subcategory: "Cross-Chain Interface",
-      description:
-        "Cross-chain asset bridge with instant transaction estimation, gas tracking, and reactive transaction status.",
-      image: "/images/project/unibridge.png",
-      link: "https://uni-bridge-nine.vercel.app/",
+        "Download videos and images from various platforms with ease.",
+      image: "/images/project/media.png",
+      link: "https://mediadownloader.online/",
       tags: ["Next.js", "TypeScript", "API Routes"],
     },
+
     {
       id: 6,
       name: "Firebase Cloud Blog",
@@ -76,6 +77,28 @@ export default function Project() {
       image: "/images/project/firebase.png",
       link: "https://personal-blogfirebase.vercel.app/",
       tags: ["Firebase", "Next.js", "Tailwind"],
+    },
+    {
+      id: 7,
+      name: "Legends of the Armory",
+      category: "Three JS",
+      subcategory: "Gaming",
+      description:
+        "Legends of the Armory is a web3 RPG game where players can collect and upgrade weapons, battle monsters, and earn rewards.",
+      image: "/images/project/game.png",
+      link: "https://game-murex-alpha.vercel.app/",
+      tags: ["Firebase", "Next.js", "Tailwind", "Framer Motion", "Shadcn UI"],
+    },
+    {
+      id: 8,
+      name: "Uni-Bridge Protocol",
+      category: "Web3",
+      subcategory: "Cross-Chain Interface",
+      description:
+        "Cross-chain asset bridge with instant transaction estimation, gas tracking, and reactive transaction status.",
+      image: "/images/project/unibridge.png",
+      link: "https://uni-bridge-nine.vercel.app/",
+      tags: ["Next.js", "TypeScript", "API Routes"],
     },
   ];
 
@@ -89,11 +112,20 @@ export default function Project() {
   const filteredProjects =
     activeFilter === "all"
       ? projects
-      : projects.filter(
-          (p) =>
-            p.category.toLowerCase() === activeFilter.toLowerCase() ||
-            (activeFilter === "Fintech" && (p.category === "Fintech" || p.category === "SaaS"))
-        );
+      : projects.filter((p) => {
+          const cat = p.category.toLowerCase();
+          const filter = activeFilter.toLowerCase();
+          if (cat === filter) return true;
+          if (filter === "fintech") {
+            return (
+              cat === "fintech" || cat === "saas" || cat === "fintech & saas"
+            );
+          }
+          if (filter === "web3") {
+            return cat === "web3" || cat === "defi" || cat === "web3 & defi";
+          }
+          return false;
+        });
 
   return (
     <section id="works" className="py-24 relative overflow-hidden bg-white">

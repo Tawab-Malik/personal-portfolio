@@ -9,15 +9,27 @@ export default function Experience() {
       company: "Code Cradle Technologies",
       role: "Frontend Developer",
       type: "Full Time",
-      period: "May 2024 — Present",
+      period: "August 2026 — Present",
       location: "Bahawalpur, Pakistan",
       highlights: [
-        "Architected and delivered over 10 production-ready React & Next.js applications with modern responsive design systems.",
-        "Led frontend engineering on Wired Academy, a full-stack Next.js project with dynamic routing, ISR, and API route integrations.",
-        "Collaborated with backend engineers to optimize RESTful endpoints and ensure sub-second page load speeds.",
-        "Mentored junior developers on Git workflows, TypeScript standards, and component reusability.",
+        "Returned to Code Cradle Technologies to spearhead frontend engineering on key client and in-house web applications.",
+        "Architecting responsive, production-ready React & Next.js web applications with modern component design systems and smooth interactions.",
+        "Collaborating across multidisciplinary teams to ensure optimal performance, reliable API integrations, and code quality standards.",
       ],
-      skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "REST APIs"],
+      skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "API Integration"],
+    },
+    {
+      company: "Xnerd Solutions",
+      role: "Backend & Frontend Developer",
+      type: "Full Time",
+      period: "April 2026 — August 2026",
+      location: "Pakistan",
+      highlights: [
+        "Developed and maintained backend services, implementing complete CRUD operations and scalable REST APIs.",
+        "Conducted end-to-end API testing, validation, and endpoint debugging using Postman to ensure reliable service communication.",
+        "Integrated client-side asynchronous data fetching, connecting backend endpoints seamlessly with interactive frontend interfaces.",
+      ],
+      skills: ["REST APIs", "CRUD Operations", "Postman", "Data Fetching", "Backend Dev", "React.js"],
     },
     {
       company: "AppAura.net",
@@ -31,6 +43,20 @@ export default function Experience() {
         "Integrated state management with React Hooks, Context API, and third-party Web3 integrations.",
       ],
       skills: ["React.js", "Figma", "Tailwind CSS", "Context API", "Responsive Design"],
+    },
+    {
+      company: "Code Cradle Technologies",
+      role: "Frontend Developer",
+      type: "Full Time",
+      period: "May 2024 — April 2026",
+      location: "Bahawalpur, Pakistan",
+      highlights: [
+        "Architected and delivered over 10 production-ready React & Next.js applications with modern responsive design systems.",
+        "Led frontend engineering on Wired Academy, a full-stack Next.js project with dynamic routing, ISR, and API route integrations.",
+        "Collaborated with backend engineers to optimize RESTful endpoints and ensure sub-second page load speeds.",
+        "Mentored junior developers on Git workflows, TypeScript standards, and component reusability.",
+      ],
+      skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "REST APIs"],
     },
   ];
 
@@ -51,7 +77,7 @@ export default function Experience() {
         <div className="space-y-8">
           {experiences.map((exp, idx) => (
             <motion.div
-              key={exp.company}
+              key={`${exp.company}-${exp.period}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
