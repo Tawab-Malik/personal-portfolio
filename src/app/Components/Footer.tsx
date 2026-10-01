@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="text-center md:text-left">
             <Link href="/" className="inline-flex items-center gap-2">
-              <span className="font-serif italic text-3xl font-bold tracking-tight text-slate-900">
+              <span className="inline-block font-serif italic text-3xl font-bold tracking-tight text-slate-900 pr-2">
                 Abdul Tawab
               </span>
               <span className="font-sans text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-lime-400/25 text-lime-800 font-bold border border-lime-400/40">

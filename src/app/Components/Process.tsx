@@ -80,18 +80,21 @@ export default function Process() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.15 }}
-                className="bg-white p-8 sm:p-9 rounded-3xl relative border border-slate-200/90 shadow-[0_15px_35px_rgba(0,0,0,0.04)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group flex flex-col justify-between"
+                className="bg-white/95 backdrop-blur-xl p-8 sm:p-9 rounded-3xl relative border border-slate-200/90 shadow-[0_10px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.09)] hover:border-lime-500/50 hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between"
               >
                 <div>
                   {/* Step Number */}
-                  <div className="mb-6">
-                    <span className="font-serif italic text-4xl sm:text-5xl font-bold text-slate-400 group-hover:text-lime-600 transition-colors">
+                  <div className="mb-6 flex items-center justify-between">
+                    <span className="inline-block font-serif italic text-4xl sm:text-5xl font-bold pr-3 py-1 text-slate-800 group-hover:text-lime-600 transition-colors tracking-normal select-none">
                       {step.number}
+                    </span>
+                    <span className="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-lime-400/25 flex items-center justify-center transition-colors">
+                      <span className="w-2.5 h-2.5 rounded-full bg-slate-400 group-hover:bg-lime-600 transition-colors" />
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-lime-800 transition-colors">
                     {step.title}
                   </h3>
 
@@ -102,7 +105,7 @@ export default function Process() {
                 </div>
 
                 <div className="mt-8 pt-4 border-t border-slate-100 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-lime-500" />
+                  <span className="w-2 h-2 rounded-full bg-lime-500 shadow-xs" />
                   <span className="text-[11px] text-slate-500 font-semibold uppercase tracking-wider">
                     Milestone {step.number}
                   </span>
@@ -121,14 +124,19 @@ export default function Process() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.2 }}
-              className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_10px_30px_rgba(0,0,0,0.03)] relative"
+              className="bg-white/95 backdrop-blur-xl p-7 sm:p-8 rounded-3xl border border-slate-200/90 shadow-[0_10px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_45px_rgba(15,23,42,0.07)] hover:border-lime-500/40 transition-all duration-300 relative"
             >
-              <BiSolidQuoteAltLeft className="w-8 h-8 text-lime-500/25 mb-3" />
+              <div className="flex items-center justify-between mb-4">
+                <BiSolidQuoteAltLeft className="w-8 h-8 text-lime-500/30" />
+                <div className="flex items-center gap-1 text-amber-400 text-xs">
+                  ★★★★★
+                </div>
+              </div>
               <p className="text-xs sm:text-sm text-slate-700 italic leading-relaxed mb-6 font-serif">
                 &ldquo;{t.quote}&rdquo;
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-slate-950 text-white flex items-center justify-center font-bold text-sm shadow-sm">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-slate-900 to-slate-950 text-white flex items-center justify-center font-bold text-sm shadow-sm ring-2 ring-lime-400/30">
                   {t.author.charAt(0)}
                 </div>
                 <div>

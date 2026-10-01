@@ -65,27 +65,30 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: gIdx * 0.15 }}
-              className="bg-[#fafbfe] p-7 rounded-3xl border border-slate-200/90 shadow-[0_10px_25px_rgba(0,0,0,0.03)] flex flex-col justify-between"
+              className="bg-white/95 backdrop-blur-xl p-7 rounded-3xl border border-slate-200/90 shadow-[0_10px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_45px_rgba(15,23,42,0.08)] hover:border-lime-500/40 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <h3 className="text-xs uppercase tracking-wider font-bold text-slate-900 mb-6 pb-3 border-b border-slate-200">
-                  {group.category}
-                </h3>
+                <div className="flex items-center justify-between mb-6 pb-3 border-b border-slate-100">
+                  <h3 className="text-xs uppercase tracking-wider font-extrabold text-slate-900">
+                    {group.category}
+                  </h3>
+                  <span className="w-2 h-2 rounded-full bg-lime-500 shadow-xs" />
+                </div>
                 <div className="grid grid-cols-2 gap-3">
                   {group.items.map((skill) => (
                     <div
                       key={skill.name}
-                      className="flex items-center gap-2.5 p-2.5 rounded-2xl bg-white hover:border-lime-500 hover:shadow-sm border border-slate-200/80 transition-all group"
+                      className="flex items-center gap-2.5 p-3 rounded-2xl bg-slate-50/80 hover:bg-white hover:border-lime-500/70 hover:shadow-sm border border-slate-200/70 transition-all duration-200 hover:scale-[1.02] group"
                     >
-                      <div className="w-7 h-7 relative shrink-0">
+                      <div className="w-7 h-7 relative shrink-0 p-0.5">
                         <Image
                           src={skill.image}
                           alt={skill.name}
                           fill
-                          className="object-contain"
+                          className="object-contain group-hover:scale-110 transition-transform duration-200"
                         />
                       </div>
-                      <span className="text-xs font-semibold text-slate-800 group-hover:text-lime-700 transition-colors truncate">
+                      <span className="text-xs font-semibold text-slate-800 group-hover:text-lime-800 transition-colors truncate">
                         {skill.name}
                       </span>
                     </div>

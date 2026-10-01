@@ -115,7 +115,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: Direct Links & Resume Card */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-[#fafbfe] p-7 sm:p-8 rounded-3xl border border-slate-200/90 shadow-[0_15px_35px_rgba(0,0,0,0.03)]">
+            <div className="bg-white/95 backdrop-blur-xl p-7 sm:p-8 rounded-3xl border border-slate-200/90 shadow-[0_12px_36px_rgba(15,23,42,0.04)]">
               <h3 className="text-xl font-bold text-slate-900 mb-2">
                 Direct Channels
               </h3>
@@ -131,7 +131,7 @@ export default function Contact() {
                       key={contact.name}
                       href={contact.href}
                       target="_blank"
-                      className={`flex items-center justify-between p-3.5 rounded-2xl bg-white border border-slate-200/80 hover:border-lime-500/70 hover:shadow-sm transition-all group ${contact.color}`}
+                      className={`flex items-center justify-between p-3.5 rounded-2xl bg-slate-50/70 hover:bg-white border border-slate-200/80 hover:border-lime-500/70 hover:shadow-sm hover:scale-[1.01] transition-all duration-200 group ${contact.color}`}
                     >
                       <div className="flex items-center gap-3">
                         <Icon className="w-5 h-5 text-slate-600 group-hover:text-lime-600 transition-colors" />
@@ -144,18 +144,18 @@ export default function Contact() {
                           </p>
                         </div>
                       </div>
-                      <HiArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-slate-900 transition-colors" />
+                      <HiArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-slate-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                     </Link>
                   );
                 })}
               </div>
 
               {/* CV Download banner */}
-              <div className="mt-8 pt-6 border-t border-slate-200">
+              <div className="mt-8 pt-6 border-t border-slate-100">
                 <Link
                   href="/images/Abdul_TawabCV.pdf"
                   target="_blank"
-                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-slate-950 text-white font-bold text-xs uppercase tracking-wider hover:bg-slate-800 active:scale-95 transition-all shadow-md"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-slate-950 text-white font-bold text-xs uppercase tracking-wider hover:bg-slate-800 hover:scale-[1.01] active:scale-95 transition-all shadow-md"
                 >
                   <GoDownload className="w-4 h-4 text-lime-400" />
                   <span>Download Curriculum Vitae (CV)</span>
@@ -166,7 +166,7 @@ export default function Contact() {
 
           {/* Right Column: Interactive Form */}
           <div className="lg:col-span-7">
-            <div className="bg-[#fafbfe] p-7 sm:p-8 rounded-3xl border border-slate-200/90 shadow-[0_15px_35px_rgba(0,0,0,0.03)] relative">
+            <div className="bg-white/95 backdrop-blur-xl p-7 sm:p-8 rounded-3xl border border-slate-200/90 shadow-[0_12px_36px_rgba(15,23,42,0.04)] relative">
               <h3 className="text-xl font-bold text-slate-900 mb-6">
                 Send a Message
               </h3>
@@ -187,7 +187,7 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         placeholder="John Doe"
-                        className="w-full pl-10 pr-4 py-3 rounded-2xl bg-white border border-slate-200 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500 shadow-inner transition-all"
+                        className="w-full pl-10 pr-4 py-3 rounded-2xl bg-slate-50/60 focus:bg-white border border-slate-200/90 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-2 focus:ring-lime-400/20 shadow-xs transition-all"
                       />
                     </div>
                   </div>
@@ -206,7 +206,7 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         placeholder="john@example.com"
-                        className="w-full pl-10 pr-4 py-3 rounded-2xl bg-white border border-slate-200 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500 shadow-inner transition-all"
+                        className="w-full pl-10 pr-4 py-3 rounded-2xl bg-slate-50/60 focus:bg-white border border-slate-200/90 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-2 focus:ring-lime-400/20 shadow-xs transition-all"
                       />
                     </div>
                   </div>
@@ -226,7 +226,7 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+1 (555) 000-0000"
-                        className="w-full pl-10 pr-4 py-3 rounded-2xl bg-white border border-slate-200 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500 shadow-inner transition-all"
+                        className="w-full pl-10 pr-4 py-3 rounded-2xl bg-slate-50/60 focus:bg-white border border-slate-200/90 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-2 focus:ring-lime-400/20 shadow-xs transition-all"
                       />
                     </div>
                   </div>
@@ -244,7 +244,7 @@ export default function Contact() {
                         value={formData.subject}
                         onChange={handleChange}
                         placeholder="New Project Inquiry"
-                        className="w-full pl-10 pr-4 py-3 rounded-2xl bg-white border border-slate-200 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500 shadow-inner transition-all"
+                        className="w-full pl-10 pr-4 py-3 rounded-2xl bg-slate-50/60 focus:bg-white border border-slate-200/90 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-2 focus:ring-lime-400/20 shadow-xs transition-all"
                       />
                     </div>
                   </div>
@@ -262,7 +262,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="Tell me about your project scope, timeline, and goals..."
-                    className="w-full p-4 rounded-2xl bg-white border border-slate-200 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500 shadow-inner transition-all resize-none"
+                    className="w-full p-4 rounded-2xl bg-slate-50/60 focus:bg-white border border-slate-200/90 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-lime-500 focus:ring-2 focus:ring-lime-400/20 shadow-xs transition-all resize-none"
                   />
                 </div>
 
@@ -270,7 +270,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-full bg-slate-950 text-white font-bold text-xs uppercase tracking-wider hover:bg-slate-800 active:scale-95 disabled:opacity-50 transition-all shadow-md flex items-center justify-center gap-2"
+                  className="w-full py-4 rounded-full bg-gradient-to-r from-slate-950 via-slate-900 to-black text-white font-bold text-xs uppercase tracking-wider hover:shadow-lime-500/20 hover:scale-[1.01] active:scale-95 disabled:opacity-50 transition-all shadow-md flex items-center justify-center gap-2 border border-white/10"
                 >
                   {isSubmitting ? "Sending..." : "Send Message ↗"}
                 </button>

@@ -33,20 +33,20 @@ export default function Herosection() {
 
   return (
     <section className="relative pt-32 sm:pt-36 md:pt-44 pb-16 overflow-hidden">
-      {/* Ultra HD Multi-Layer Ambient Lime Aura Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] sm:w-[560px] sm:h-[560px] lg:w-[720px] lg:h-[720px] pointer-events-none z-0">
-        <div className="w-full h-full rounded-full bg-gradient-to-tr from-lime-400/60 via-emerald-400/40 to-lime-200/30 blur-[90px] md:blur-[130px] animate-pulse-slow" />
+      {/* Multi-Layer Ambient Luxury Aura Glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] sm:w-[580px] sm:h-[580px] lg:w-[760px] lg:h-[760px] pointer-events-none z-0">
+        <div className="w-full h-full rounded-full bg-gradient-to-tr from-lime-400/50 via-emerald-400/35 to-teal-300/20 blur-[100px] md:blur-[140px] animate-pulse-slow" />
       </div>
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
-        {/* Top Recognition Badge with Laurels Icon matching reference */}
+        {/* Top Recognition Badge with Laurels Icon */}
         <motion.div
           initial={{ opacity: 0, y: -16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="flex justify-center items-center gap-2 mb-6"
         >
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 shadow-[0_4px_16px_rgba(0,0,0,0.06)] border border-slate-200/80 text-xs font-semibold text-slate-800 backdrop-blur-md">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/95 shadow-[0_4px_20px_rgba(15,23,42,0.06)] border border-slate-200/90 text-xs font-semibold text-slate-800 backdrop-blur-xl hover:border-lime-500/50 transition-colors">
             {/* Laurel Wreath SVG */}
             <svg
               className="w-4 h-4 text-lime-600"
@@ -73,16 +73,21 @@ export default function Herosection() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-center max-w-4xl mx-auto"
         >
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900 leading-[1.08]">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-slate-900 leading-[1.08]">
             Hi I&apos;m Abdul{" "}
-            <span className="block font-serif italic font-normal tracking-tight text-slate-950 mt-1">
-              Frontend Developer
+            <span className="block">
+              <span className="inline-block font-serif italic font-normal tracking-normal text-slate-950 mt-1 pr-4 pb-1 select-none">
+                Frontend Developer
+              </span>
             </span>
           </h1>
         </motion.div>
 
-        {/* Centerpiece Image & Overlapping Floating Badges matching screenshot */}
+        {/* Centerpiece Image & Overlapping Floating Badges */}
         <div className="relative mt-8 md:mt-10 flex justify-center items-center min-h-[460px] md:min-h-[580px]">
+          {/* Subtle halo ring behind image */}
+          <div className="absolute w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] rounded-full bg-gradient-to-b from-white/80 to-lime-200/20 blur-2xl pointer-events-none -z-0" />
+
           {/* Portrait Photo Cutout */}
           <motion.div
             initial={{ opacity: 0, scale: 0.94 }}
@@ -96,7 +101,7 @@ export default function Herosection() {
                 alt="Abdul Tawab - Frontend Engineer"
                 fill
                 priority
-                className="object-contain object-bottom drop-shadow-[0_25px_50px_rgba(0,0,0,0.18)]"
+                className="object-contain object-bottom drop-shadow-[0_30px_60px_rgba(15,23,42,0.22)]"
               />
             </div>
           </motion.div>
@@ -108,12 +113,12 @@ export default function Herosection() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="absolute left-2 sm:left-6 md:left-12 top-14 sm:top-24 z-20"
           >
-            <div className="glass-pill px-4 py-2.5 rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.08)] flex items-center gap-2.5 border border-slate-200 bg-white/95">
+            <div className="glass-pill px-4 py-2.5 rounded-full shadow-[0_10px_28px_rgba(15,23,42,0.08)] flex items-center gap-2.5 border border-slate-200/90 bg-white/95 hover:scale-105 transition-transform duration-300">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-lime-500 shadow-sm" />
               </span>
-              <span className="text-xs sm:text-sm font-semibold text-slate-800">
+              <span className="text-xs sm:text-sm font-semibold text-slate-800 tracking-tight">
                 Available for new opportunities
               </span>
             </div>
@@ -126,7 +131,7 @@ export default function Herosection() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="absolute left-2 sm:left-6 md:left-12 bottom-6 sm:bottom-12 z-20 max-w-[260px] sm:max-w-[290px]"
           >
-            <div className="glass-card p-3.5 sm:p-4 rounded-2xl shadow-[0_12px_32px_rgba(0,0,0,0.08)] flex items-center gap-3 border border-slate-200/90 bg-white/95">
+            <div className="glass-card p-3.5 sm:p-4 rounded-2xl shadow-[0_14px_36px_rgba(15,23,42,0.09)] flex items-center gap-3 border border-slate-200/90 bg-white/95 hover:-translate-y-1 transition-transform duration-300">
               <div className="flex -space-x-2.5 overflow-hidden">
                 <div className="inline-block h-8 w-8 sm:h-9 sm:w-9 rounded-full ring-2 ring-white bg-lime-400 text-slate-950 font-bold text-xs flex items-center justify-center shadow-sm">
                   AT
@@ -139,22 +144,26 @@ export default function Herosection() {
                 </div>
               </div>
               <div className="text-[11px] sm:text-xs text-slate-600 leading-tight">
-                <p className="font-bold text-slate-950">Trusted by over 20+ happy clients</p>
-                <p className="text-[10px] text-slate-500 mt-0.5">across residential and global projects</p>
+                <div className="flex items-center gap-1 mb-0.5">
+                  <span className="text-amber-400 text-[10px] tracking-tighter">★★★★★</span>
+                  <span className="text-[10px] font-bold text-slate-800">5.0</span>
+                </div>
+                <p className="font-bold text-slate-950">Trusted by 20+ clients</p>
+                <p className="text-[10px] text-slate-500">worldwide &amp; local startups</p>
               </div>
             </div>
           </motion.div>
 
-          {/* Right Element 1: Subtitle Copy from Screenshot */}
+          {/* Right Element 1: Subtitle Statement */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="absolute right-2 sm:right-6 md:right-12 top-16 sm:top-28 z-20 max-w-[220px] sm:max-w-[270px] text-left"
           >
-            <div className="glass-card p-4 rounded-2xl shadow-[0_12px_32px_rgba(0,0,0,0.08)] border border-slate-200/90 bg-white/95">
+            <div className="glass-card p-4 rounded-2xl shadow-[0_14px_36px_rgba(15,23,42,0.09)] border border-slate-200/90 bg-white/95 hover:-translate-y-1 transition-transform duration-300">
               <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-                Passionate about creating intuitive digital experiences that connect users with value.
+                Passionate about creating intuitive digital experiences that connect users with real value.
               </p>
             </div>
           </motion.div>
@@ -168,15 +177,15 @@ export default function Herosection() {
           >
             <Link
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-slate-950 text-white font-bold text-xs sm:text-sm tracking-wide shadow-[0_6px_20px_rgba(0,0,0,0.2)] hover:bg-slate-800 hover:scale-105 active:scale-95 transition-all"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white font-bold text-xs sm:text-sm tracking-wide shadow-[0_10px_25px_rgba(15,23,42,0.25)] hover:shadow-lime-500/20 hover:scale-105 active:scale-95 transition-all duration-300 border border-white/10 group"
             >
               <span>Get In Touch</span>
-              <GoArrowRight className="w-4 h-4 text-lime-400" />
+              <GoArrowRight className="w-4 h-4 text-lime-400 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="/images/Abdul_TawabCV.pdf"
               target="_blank"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full glass-pill font-semibold text-xs sm:text-sm text-slate-800 hover:text-slate-950 hover:bg-white hover:scale-105 active:scale-95 transition-all border border-slate-200"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full glass-pill font-semibold text-xs sm:text-sm text-slate-800 hover:text-slate-950 hover:bg-white hover:scale-105 active:scale-95 transition-all duration-300 border border-slate-200/90 shadow-sm"
             >
               <GoDownload className="w-4 h-4 text-lime-600" />
               <span>Resume</span>
@@ -184,19 +193,19 @@ export default function Herosection() {
           </motion.div>
         </div>
 
-        {/* Client & Tech Stack Ticker Row matching reference */}
+        {/* Client & Tech Stack Ticker Row */}
         <div className="mt-14 pt-8 border-t border-slate-200/80 relative">
           <div className="overflow-hidden relative [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
-            <div className="flex gap-10 sm:gap-14 w-max animate-marquee py-3">
+            <div className="flex gap-4 sm:gap-6 w-max animate-marquee py-3">
               {[...techLogos, ...techLogos].map((tech, index) => {
                 const Icon = tech.icon;
                 return (
                   <div
                     key={index}
-                    className="flex items-center gap-2.5 text-slate-500 hover:text-slate-900 transition-colors cursor-pointer group"
+                    className="flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-white/80 border border-slate-200/80 shadow-[0_2px_8px_rgba(15,23,42,0.03)] hover:border-lime-500/60 hover:bg-white hover:shadow-md transition-all duration-300 cursor-pointer group"
                   >
-                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 group-hover:text-lime-600 transition-colors" />
-                    <span className="text-xs sm:text-sm font-bold tracking-wider uppercase text-slate-600 group-hover:text-slate-900">
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-600 group-hover:text-lime-600 transition-colors" />
+                    <span className="text-xs font-bold tracking-wide uppercase text-slate-700 group-hover:text-slate-950 transition-colors">
                       {tech.name}
                     </span>
                   </div>

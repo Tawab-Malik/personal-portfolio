@@ -43,19 +43,19 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.15 }}
-              className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/90 shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex flex-col justify-between hover:border-lime-400 transition-colors"
+              className="bg-white/95 backdrop-blur-xl p-7 sm:p-8 rounded-3xl border border-slate-200/90 shadow-[0_10px_30px_rgba(15,23,42,0.04)] flex flex-col justify-between hover:border-lime-500/50 hover:shadow-[0_20px_45px_rgba(15,23,42,0.08)] hover:-translate-y-1.5 transition-all duration-300"
             >
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-lime-400/20 text-lime-700 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-lime-400/20 text-lime-800 flex items-center justify-center mb-6 shadow-xs">
                   <HiAcademicCap className="w-6 h-6" />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-2 mb-3">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200/60">
                     <HiCalendar className="w-3.5 h-3.5 text-lime-600" />
                     {deg.period}
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200/60">
                     <HiMapPin className="w-3.5 h-3.5 text-lime-600" />
                     {deg.location}
                   </span>

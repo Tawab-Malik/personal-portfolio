@@ -35,16 +35,16 @@ export default function Header() {
       <div
         className={`max-w-7xl mx-auto flex items-center justify-between transition-all duration-300 rounded-full px-5 py-3 ${
           scrolled
-            ? "glass-pill shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-slate-200/80 bg-white/90 backdrop-blur-xl"
-            : "bg-white/60 backdrop-blur-md border border-slate-200/50"
+            ? "glass-pill shadow-[0_10px_35px_rgba(15,23,42,0.08)] border border-slate-200/90 bg-white/95 backdrop-blur-2xl"
+            : "bg-white/80 backdrop-blur-xl border border-slate-200/70 shadow-xs"
         }`}
       >
         {/* Brand / Logo matching reference */}
         <Link href="/" className="group flex items-center gap-2">
-          <span className="font-serif italic text-2xl font-bold tracking-tight text-slate-900 group-hover:text-lime-600 transition-colors">
+          <span className="inline-block font-serif italic text-2xl font-bold tracking-tight text-slate-900 group-hover:text-lime-700 transition-colors pr-2 py-0.5">
             Abdul Tawab
           </span>
-          <span className="font-sans text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-lime-400/25 text-lime-800 font-bold border border-lime-400/40">
+          <span className="font-sans text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-lime-400/25 text-lime-900 font-extrabold border border-lime-400/50 shadow-2xs">
             Portfolio
           </span>
         </Link>
@@ -55,7 +55,7 @@ export default function Header() {
             <Link
               key={link.name}
               href={link.href}
-              className="hover:text-slate-950 transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-lime-500 hover:after:w-full after:transition-all"
+              className="hover:text-slate-950 transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-lime-500 hover:after:w-full after:transition-all duration-200"
             >
               {link.name}
             </Link>
@@ -66,7 +66,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <Link
             href="#contact"
-            className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-bold tracking-wide uppercase bg-slate-950 text-white hover:bg-slate-800 shadow-[0_4px_14px_rgba(0,0,0,0.15)] hover:shadow-lime-500/20 active:scale-95 transition-all"
+            className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-bold tracking-wide uppercase bg-gradient-to-r from-slate-950 via-slate-900 to-black text-white hover:scale-105 active:scale-95 shadow-[0_4px_16px_rgba(15,23,42,0.2)] hover:shadow-lime-500/20 transition-all duration-200 border border-white/10"
           >
             <span>Let&apos;s Talk</span>
             <GoArrowUpRight className="w-3.5 h-3.5 text-lime-400" />

@@ -16,16 +16,16 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden bg-white/70 border-y border-slate-200/60">
+    <section id="about" className="py-24 relative overflow-hidden bg-white/80 border-y border-slate-200/80">
       {/* Soft ambient aura */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] pointer-events-none z-0">
-        <div className="w-full h-full rounded-full bg-lime-400/20 blur-[100px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[380px] pointer-events-none z-0">
+        <div className="w-full h-full rounded-full bg-gradient-to-r from-lime-300/15 via-emerald-300/15 to-transparent blur-[110px]" />
       </div>
 
       <div className="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
         {/* Editorial Greeting Tag */}
-        <div className="text-center mb-5">
-          <span className="font-serif italic text-3xl md:text-4xl text-slate-800">
+        <div className="text-center mb-6">
+          <span className="inline-block font-serif italic text-3xl md:text-4xl text-slate-800 pr-2 select-none">
             Hello!
           </span>
         </div>
@@ -41,9 +41,9 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.15 }}
-                className={`inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-semibold shadow-sm border ${pill.bg} ${pill.text}`}
+                className={`inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-semibold shadow-xs border ${pill.bg} ${pill.text} backdrop-blur-md hover:scale-105 transition-transform duration-200`}
               >
-                <span className={`w-2 h-2 rounded-full ${pill.color}`} />
+                <span className={`w-2 h-2 rounded-full ${pill.color} shadow-xs`} />
                 <span>{pill.name}</span>
               </motion.div>
             ))}
@@ -59,11 +59,11 @@ export default function About() {
           >
             <h2 className="text-2xl sm:text-4xl md:text-[42px] font-medium tracking-tight text-slate-900 leading-snug md:leading-tight">
               focus is on blending{" "}
-              <span className="font-semibold text-slate-950 underline decoration-lime-400 decoration-wavy underline-offset-8">
+              <span className="font-bold text-slate-950 underline decoration-lime-400 decoration-wavy underline-offset-8">
                 clear strategy
               </span>
               , thoughtful design, and robust code to{" "}
-              <span className="font-serif italic font-normal text-slate-950">
+              <span className="inline-block font-serif italic font-normal text-slate-950 px-1">
                 craft experiences
               </span>{" "}
               that solve real problems.
@@ -79,16 +79,16 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.15 }}
-                className={`inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-semibold shadow-sm border ${pill.bg} ${pill.text}`}
+                className={`inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-semibold shadow-xs border ${pill.bg} ${pill.text} backdrop-blur-md hover:scale-105 transition-transform duration-200`}
               >
-                <span className={`w-2 h-2 rounded-full ${pill.color}`} />
+                <span className={`w-2 h-2 rounded-full ${pill.color} shadow-xs`} />
                 <span>{pill.name}</span>
               </motion.div>
             ))}
           </div>
         </div>
 
-        {/* Stats Row with Crisp White Cards */}
+        {/* Stats Row with Luxury Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-16 max-w-4xl mx-auto">
           {[
             { value: "2.5+", label: "Years Experience" },
@@ -102,12 +102,12 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-white p-6 rounded-3xl text-center border border-slate-200/90 shadow-[0_10px_25px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_35px_rgba(0,0,0,0.06)] hover:border-lime-500/50 transition-all"
+              className="bg-white/95 backdrop-blur-xl p-6 sm:p-7 rounded-3xl text-center border border-slate-200/90 shadow-[0_8px_25px_rgba(15,23,42,0.03)] hover:shadow-[0_16px_35px_rgba(15,23,42,0.07)] hover:border-lime-500/50 hover:-translate-y-1 transition-all duration-300"
             >
-              <h3 className="text-3xl sm:text-4xl font-bold font-serif italic text-slate-950 mb-1">
+              <h3 className="inline-block text-3xl sm:text-4xl font-extrabold font-serif italic text-slate-950 mb-1 pr-2">
                 {stat.value}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-500 font-semibold">
+              <p className="text-xs sm:text-sm text-slate-600 font-semibold tracking-tight">
                 {stat.label}
               </p>
             </motion.div>
