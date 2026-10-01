@@ -90,6 +90,28 @@ export default function Project() {
       tags: ["Firebase", "Next.js", "Tailwind", "Framer Motion", "Shadcn UI"],
     },
     {
+      id: 9,
+      name: "Hotel Management System",
+      category: "Full Stack",
+      subcategory: "Hotel Management",
+      description:
+        "Hotel Management System is a web application for managing hotel operations. It provides features such as room booking, guest management, and billing.",
+      image: "/images/project/hotel.png",
+      link: "https://hotel-management-three-tawny.vercel.app/",
+      tags: ["Firebase", "Next.js", "Tailwind", "Framer Motion", "Shadcn UI"],
+    },
+    {
+      id: 10,
+      name: "Student Dropout Prediction",
+      category: "Machine Learning",
+      subcategory: "Prediction",
+      description:
+        "Predicting student dropout rate using machine learning algorithms.",
+      image: "/images/project/school.png",
+      link: "https://student-droput.vercel.app/",
+      tags: ["Firebase", "Next.js", "Tailwind", "Framer Motion", "Shadcn UI"],
+    },
+    {
       id: 8,
       name: "Uni-Bridge Protocol",
       category: "Web3",
